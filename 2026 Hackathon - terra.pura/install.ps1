@@ -214,7 +214,7 @@ if ($always) {
   Show-Urls $port $lan
   Say '  It now runs in the background and starts automatically whenever you log in to Windows.'
   Say '  To stop it, run the same command again and choose 5 (or 6 to uninstall).'
-  if (-not $env:TP_NOBROWSER) { Start-Process "http://localhost:$port" }
+  if (-not $env:TP_NOBROWSER) { Start-Process explorer.exe "http://localhost:$port" }
   return
 }
 
@@ -223,5 +223,5 @@ $proc = Start-Process -FilePath $py.exe -ArgumentList $args_ -WorkingDirectory $
 if (-not (Wait-Server $port)) { Say '  The server didn''t start. See the messages above.' 'Red'; return }
 Show-Urls $port $lan
 Say '  Keep this window open while you use it. Press Ctrl+C to stop.'
-if (-not $env:TP_NOBROWSER) { Start-Process "http://localhost:$port" }
+if (-not $env:TP_NOBROWSER) { Start-Process explorer.exe "http://localhost:$port" }
 try { Wait-Process -Id $proc.Id } finally { if (-not $proc.HasExited) { Stop-Process -Id $proc.Id -Force } }
