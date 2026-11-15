@@ -44,7 +44,8 @@ Whichever way you start it, terra.pura asks one question:
   [2] Open it now, and share it on my network (LAN)   (phones and other computers on your Wi-Fi)
   [3] Keep it running in the background 24/7         (starts when you log in)
   [4] Keep it running 24/7 AND share it on my network
-  [5] Remove terra.pura from this computer
+  [5] Stop terra.pura                               (stops it and turns off start-at-login; keeps it installed)
+  [6] Uninstall terra.pura from this computer
 ```
 
 Press **Enter** for the default, and terra.pura opens in your browser at **http://localhost:5173**.
@@ -53,8 +54,34 @@ Press **Enter** for the default, and terra.pura opens in your browser at **http:
   - **Windows:** if you don't have it, the installer downloads a small portable copy (no admin rights needed).
   - **macOS and Linux:** usually already installed; if not, the installer tells you how to get it.
 - **Install location:** `%LOCALAPPDATA%\terra.pura` on Windows, `~/Library/Application Support/terra.pura` on macOS, `~/.local/share/terra.pura` on Linux.
-- **Updating or removing:** run the same command or launcher again to update, change the option, or choose **5** to remove it.
+- **Updating:** run the same command or launcher again to update it or change the option.
 - **Sharing on your network (2 or 4):** other devices open the address it prints, e.g. `http://192.168.1.20:5173`. Windows asks once to allow it through the firewall, on private networks only.
+
+### Stop or uninstall
+
+**Stop it** (shuts it down and stops it starting when you log in, but keeps it installed):
+
+- Windows (PowerShell):
+  ```powershell
+  $env:TP_MODE='stop'; irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.ps1' | iex
+  ```
+- macOS / Linux (Terminal):
+  ```bash
+  curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | TP_MODE=stop bash
+  ```
+
+**Uninstall it completely** (stops it and deletes everything it installed):
+
+- Windows (PowerShell):
+  ```powershell
+  $env:TP_MODE='remove'; irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.ps1' | iex
+  ```
+- macOS / Linux (Terminal):
+  ```bash
+  curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | TP_MODE=remove bash
+  ```
+
+You can also run the normal install command or launcher and choose **5** (stop) or **6** (uninstall). If it's open in a terminal window (options 1 and 2), pressing **Ctrl+C** there stops it too. Uninstalling doesn't delete farms saved in your browser; clear those in terra.pura under Settings → Start over.
 
 ### For developers
 

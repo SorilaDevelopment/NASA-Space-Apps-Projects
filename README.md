@@ -21,8 +21,12 @@ irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Project
 curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | bash
 ```
 
-It downloads terra.pura, then asks whether to open it on this computer, share it on your network, keep it running in the background, or remove it. Press Enter for the default and it opens in your browser at http://localhost:5173.
+It downloads terra.pura, then asks whether to open it on this computer, share it on your network, keep it running in the background, stop it, or uninstall it. Press Enter for the default and it opens in your browser at http://localhost:5173.
 
 Prefer not to use a terminal? Click **Code → Download ZIP**, unzip it, open the `2026 Hackathon - terra.pura` folder and double-click **`Start terra.pura (Windows).bat`** or **`Start terra.pura (macOS).command`**.
+
+**Stop it:** Windows `$env:TP_MODE='stop'; irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.ps1' | iex` · macOS/Linux `curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | TP_MODE=stop bash`
+
+**Uninstall it:** Windows `$env:TP_MODE='remove'; irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.ps1' | iex` · macOS/Linux `curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | TP_MODE=remove bash`
 
 More detail: [terra.pura README](2026%20Hackathon%20-%20terra.pura/README.md) · Licence: [AGPL-3.0](LICENSE) or commercial, see [LICENSE.md](2026%20Hackathon%20-%20terra.pura/LICENSE.md)

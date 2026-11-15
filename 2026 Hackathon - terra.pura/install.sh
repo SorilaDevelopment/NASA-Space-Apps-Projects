@@ -6,9 +6,12 @@
 # Run in a terminal:
 #   curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | bash
 #
+# Stop it (keeps it installed):   curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | TP_MODE=stop bash
+# Uninstall it completely:        curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | TP_MODE=remove bash
+#
 # It downloads terra.pura and asks how you want to run it: on this computer, shared on your network,
 # kept running in the background, or removed. Needs python3 (3.8+), which macOS and most Linux systems have.
-# Optional settings for scripted use: TP_MODE=local|lan|always|always-lan|remove  TP_PORT=5173
+# Optional settings for scripted use: TP_MODE=local|lan|always|always-lan|stop|remove  TP_PORT=5173
 set -euo pipefail
 
 REPO='SorilaDevelopment/NASA-Space-Apps-Projects'
@@ -32,6 +35,20 @@ stop_background() {
     systemctl --user stop terrapura.service 2>/dev/null || true
   fi
   pkill -f "$APP_DIR/serve.py" 2>/dev/null || true
+}
+
+stop_all() {
+  echo; bold 'Stopping terra.pura'
+  if pgrep -f "$APP_DIR/serve.py" >/dev/null 2>&1; then was=yes; else was=no; fi
+  stop_background
+  if [ "$OS" = "Darwin" ]; then [ -f "$PLIST" ] && { rm -f "$PLIST"; say '  It will no longer start when you log in.'; }
+  elif command -v systemctl >/dev/null 2>&1 && [ -f "$UNIT" ]; then
+    systemctl --user disable terrapura.service 2>/dev/null || true; rm -f "$UNIT"; systemctl --user daemon-reload 2>/dev/null || true
+    say '  It will no longer start when you log in.'
+  fi
+  if [ "$was" = "yes" ]; then say '  Stopped the running server.'; else say "  It wasn't running."; fi
+  [ -d "$APP_DIR" ] && ok '  It is still installed: run the install command again to start it, or choose 6 to uninstall.'
+  return 0
 }
 
 remove_all() {
@@ -96,11 +113,13 @@ if [ -z "$MODE" ]; then
   say '  [2] Open it now, and share it on my network (LAN)   (phones and other computers on your Wi-Fi)'
   say '  [3] Keep it running in the background 24/7         (starts when you log in)'
   say '  [4] Keep it running 24/7 AND share it on my network'
-  say '  [5] Remove terra.pura from this computer'
-  printf '  Choose 1-5: '
+  say '  [5] Stop terra.pura                               (stops it and turns off start-at-login; keeps it installed)'
+  say '  [6] Uninstall terra.pura from this computer'
+  printf '  Choose 1-6: '
   read -r choice < /dev/tty || choice=1
-  case "$choice" in 2) MODE=lan ;; 3) MODE=always ;; 4) MODE=always-lan ;; 5) MODE=remove ;; *) MODE=local ;; esac
+  case "$choice" in 2) MODE=lan ;; 3) MODE=always ;; 4) MODE=always-lan ;; 5) MODE=stop ;; 6) MODE=remove ;; *) MODE=local ;; esac
 fi
+if [ "$MODE" = "stop" ]; then stop_all; exit 0; fi
 if [ "$MODE" = "remove" ]; then remove_all; exit 0; fi
 
 LAN=no; ALWAYS=no
@@ -165,7 +184,7 @@ EOF
   wait_server "$PORT" || { warn "  The server didn't answer. Try option 1 to see any error messages."; exit 1; }
   show_urls "$PORT" "$LAN"
   say '  It now runs in the background and starts automatically when you log in.'
-  say '  To stop it and remove it, run the same command again and choose 5.'
+  say '  To stop it, run the same command again and choose 5 (or 6 to uninstall).'
   open_browser "http://localhost:$PORT"
   exit 0
 fi

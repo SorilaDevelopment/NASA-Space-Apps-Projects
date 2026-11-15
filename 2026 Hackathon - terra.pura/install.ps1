@@ -5,9 +5,12 @@
 # Run in PowerShell:
 #   irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.ps1' | iex
 #
+# Stop it (keeps it installed):   $env:TP_MODE='stop';   irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.ps1' | iex
+# Uninstall it completely:        $env:TP_MODE='remove'; irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.ps1' | iex
+#
 # It downloads terra.pura, gets Python if you don't have it (a portable copy, no admin needed),
 # then asks how you want to run it: on this computer, shared on your network, kept running in the background, or removed.
-# Optional settings for scripted use: $env:TP_MODE = local | lan | always | always-lan | remove ; $env:TP_PORT = 5173
+# Optional settings for scripted use: $env:TP_MODE = local | lan | always | always-lan | stop | remove ; $env:TP_PORT = 5173
 
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'   # much faster downloads in Windows PowerShell 5.1
@@ -137,6 +140,16 @@ function Show-Urls([int]$port, [bool]$lan) {
   }
 }
 
+function Stop-All {
+  Title 'Stopping terra.pura'
+  $was = @(Get-CimInstance Win32_Process -Filter "Name='pythonw.exe' OR Name='python.exe'" -ErrorAction SilentlyContinue |
+    Where-Object { $_.CommandLine -and $_.CommandLine -like "*$AppDir*serve.py*" }).Count
+  Stop-Background
+  if ($was) { Say "  Stopped the running server." } else { Say '  It wasn''t running.' }
+  if (Test-Path $Startup) { Remove-Item $Startup -Force; Say '  It will no longer start when you log in.' }
+  if (Test-Path $AppDir) { Say '  It is still installed: run the install command again to start it, or choose 6 to uninstall.' 'Green' }
+}
+
 function Remove-All {
   Title 'Removing terra.pura'
   Stop-Background
@@ -160,10 +173,13 @@ if (-not $mode) {
   Say '  [2] Open it now, and share it on my network (LAN)   (phones and other computers on your Wi-Fi)'
   Say '  [3] Keep it running in the background 24/7         (starts when you log in)'
   Say '  [4] Keep it running 24/7 AND share it on my network'
-  Say '  [5] Remove terra.pura from this computer'
-  $choice = Read-Host '  Choose 1-5'
-  $mode = switch ($choice) { '2' { 'lan' } '3' { 'always' } '4' { 'always-lan' } '5' { 'remove' } default { 'local' } }
+  Say '  [5] Stop terra.pura                               (stops it and turns off start-at-login; keeps it installed)'
+  Say '  [6] Uninstall terra.pura from this computer'
+  $choice = Read-Host '  Choose 1-6'
+  $mode = switch ($choice) { '2' { 'lan' } '3' { 'always' } '4' { 'always-lan' } '5' { 'stop' } '6' { 'remove' } default { 'local' } }
 }
+if ($mode -in @('stop', 'remove')) { Remove-Item Env:TP_MODE -ErrorAction SilentlyContinue }   # so the next run shows the menu again
+if ($mode -eq 'stop') { Stop-All; return }
 if ($mode -eq 'remove') { Remove-All; return }
 
 $lan = $mode -in @('lan', 'always-lan')
@@ -197,7 +213,7 @@ if ($always) {
   if (-not (Wait-Server $port)) { Say '  The server didn''t answer. Try option 1 to see any error messages.' 'Red'; return }
   Show-Urls $port $lan
   Say '  It now runs in the background and starts automatically whenever you log in to Windows.'
-  Say '  To stop it and remove it, run the same command again and choose 5.'
+  Say '  To stop it, run the same command again and choose 5 (or 6 to uninstall).'
   if (-not $env:TP_NOBROWSER) { Start-Process "http://localhost:$port" }
   return
 }
