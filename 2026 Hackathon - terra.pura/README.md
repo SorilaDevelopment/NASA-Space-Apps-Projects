@@ -4,44 +4,68 @@ Changing how you see agriculture: find out what's worth growing on your land usi
 
 Live: https://terrapura.sorila.dev
 
-## Run it on your own computer
+## How to run it on your laptop or PC
 
-### Windows (one command)
+**Easiest: use it online at <https://terrapura.sorila.dev>.** Nothing to install.
 
-Open **PowerShell** and paste:
+To run your own copy, pick **one** of the options below. Each takes about a minute.
+
+### Option 1: paste one command (recommended)
+
+**Windows:** press the Start button, type **PowerShell**, open it, paste this line and press Enter:
 
 ```powershell
 irm 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.ps1' | iex
 ```
 
-It downloads terra.pura and, if you don't already have Python, a portable copy from python.org (no admin needed). It installs to `%LOCALAPPDATA%\terra.pura` and asks how you want to run it:
-
-1. **This computer only.** Opens in your browser; stop it with Ctrl+C.
-2. **Shared on your network.** Phones, tablets and other computers on your Wi-Fi can open it too. Windows asks once to allow it through the firewall (private networks only).
-3. **In the background 24/7.** Starts automatically whenever you log in.
-4. **Background 24/7 and shared on your network.**
-5. **Remove** terra.pura from your computer.
-
-Run the same command again any time to update or change the option.
-
-### macOS and Linux (one command)
-
-Open **Terminal** and paste:
+**macOS:** open **Terminal** (Applications → Utilities), paste this line and press Enter:
 
 ```bash
 curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | bash
 ```
 
-Same five options as on Windows. It needs `python3` (3.8+), which macOS and most Linux systems already have; if it's missing, the installer tells you how to get it. "Keep it running" uses launchd on macOS and a systemd user service on Linux.
+**Linux:** open a terminal and paste the same `curl` line as macOS.
 
-### Or run it by hand (any system with Python 3.8+)
+### Option 2: download and double-click
+
+1. On the [repository page](https://github.com/SorilaDevelopment/NASA-Space-Apps-Projects), click the green **Code** button → **Download ZIP**.
+2. Unzip it and open the **`2026 Hackathon - terra.pura`** folder.
+3. Double-click the launcher for your system:
+   - **Windows:** `Start terra.pura (Windows).bat`. If Windows SmartScreen warns you, click **More info → Run anyway**.
+   - **macOS:** `Start terra.pura (macOS).command`. The first time, **right-click → Open → Open**, because it came from the internet.
+   - **Linux:** run `./start-linux.sh` in a terminal.
+
+### What happens next
+
+Whichever way you start it, terra.pura asks one question:
+
+```text
+  [1] Open it now, on this computer only             (default)
+  [2] Open it now, and share it on my network (LAN)   (phones and other computers on your Wi-Fi)
+  [3] Keep it running in the background 24/7         (starts when you log in)
+  [4] Keep it running 24/7 AND share it on my network
+  [5] Remove terra.pura from this computer
+```
+
+Press **Enter** for the default, and terra.pura opens in your browser at **http://localhost:5173**.
+
+- **Python:** terra.pura needs Python 3.8+.
+  - **Windows:** if you don't have it, the installer downloads a small portable copy (no admin rights needed).
+  - **macOS and Linux:** usually already installed; if not, the installer tells you how to get it.
+- **Install location:** `%LOCALAPPDATA%\terra.pura` on Windows, `~/Library/Application Support/terra.pura` on macOS, `~/.local/share/terra.pura` on Linux.
+- **Updating or removing:** run the same command or launcher again to update, change the option, or choose **5** to remove it.
+- **Sharing on your network (2 or 4):** other devices open the address it prints, e.g. `http://192.168.1.20:5173`. Windows asks once to allow it through the firewall, on private networks only.
+
+### For developers
+
+There's no build step: it's HTML, CSS and ES modules plus a tiny standard-library Python file server. From this folder:
 
 ```bash
 python3 serve.py                      # http://localhost:5173, this computer only
 python3 serve.py 5173 --host 0.0.0.0  # also reachable from your network
 ```
 
-There's nothing to install or build: it's HTML, CSS and ES modules plus a tiny standard-library Python file server. Everything you enter is saved in your own browser (localStorage); there are no accounts and nothing is stored on the server.
+Everything you enter is saved in your own browser (localStorage); there are no accounts and nothing is stored on the server.
 
 ## Pages
 
