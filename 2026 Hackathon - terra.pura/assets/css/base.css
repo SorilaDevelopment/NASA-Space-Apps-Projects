@@ -1,0 +1,99 @@
+/* terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. */
+/* terra.pura — shared styles. Tokens come straight from the design exports. */
+@font-face{font-family:'Space Grotesk';src:url('../fonts/SpaceGrotesk.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Inter';src:url('../fonts/Inter.woff2') format('woff2');font-weight:100 900;font-display:swap}
+
+:root{
+  --bg:#1f1f1f;
+  --bg-2:#262626;
+  --ink:#ffffff;
+  --ink-dim:#d9d6d0;
+  --ink-mute:#9b9892;
+  --sand:#d9d6d0;
+  --dark-ink:#141416;
+  --cost:#e07856;
+  --gain:#cfe0c9;
+  --sky:#7eb3ff;
+  --line:rgba(255,255,255,.9);
+  --line-soft:rgba(255,255,255,.18);
+  --r:10px;
+  --gutter:clamp(16px,2.6vw,50px);
+  --ease:cubic-bezier(.22,.8,.24,1);
+  --ease-spring:cubic-bezier(.34,1.56,.64,1);
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+body{line-height:1.35;overflow-x:hidden}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+img{max-width:100%}
+::selection{background:var(--gain);color:var(--dark-ink)}
+
+/* cross-page fade (Chromium / Safari 18+) */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:vt-out .32s var(--ease) both}
+::view-transition-new(root){animation:vt-in .45s var(--ease) both}
+@keyframes vt-out{to{opacity:0;transform:translateY(-6px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(8px)}}
+
+/* ---------- brand ---------- */
+.brand{position:relative;z-index:5;display:inline-block;font-family:var(--display);font-size:29px;font-weight:400;text-decoration:none;letter-spacing:-.01em}
+.brand .dot{display:inline-block;color:var(--gain);transition:transform .5s var(--ease-spring)}
+.brand:hover .dot{transform:translateY(-6px) scale(1.4)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:var(--gutter) var(--gutter) 0}
+
+/* ---------- buttons ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:61px;min-width:232px;padding:0 28px;border-radius:var(--r);border:1px solid var(--ink);background:var(--ink);color:var(--bg);font-size:16px;text-decoration:none;cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .35s var(--ease),box-shadow .35s var(--ease),opacity .2s,background .3s}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--gain);transform:translateY(101%);transition:transform .45s var(--ease)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(207,224,201,.55)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn .arrow{width:18px;height:18px;transition:transform .35s var(--ease)}
+.btn:hover .arrow{transform:translateX(4px)}
+.btn[disabled]{opacity:.35;pointer-events:none}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost::before{background:rgba(255,255,255,.08)}
+.btn.lg{min-width:338px;height:69px}
+:focus-visible{outline:2px solid var(--gain);outline-offset:3px}
+
+/* ---------- panels ---------- */
+.panel{position:relative;border:1px solid var(--line);border-radius:var(--r);padding:30px;min-width:0}
+.panel h2{margin:0 0 22px;font:400 16px/1.35 var(--body)}
+.panel .row{font-size:13px;margin:0 0 6px;display:flex;justify-content:space-between;gap:12px}
+.muted{color:var(--ink-mute)}
+.sand-box{background:var(--sand);color:var(--dark-ink);border-radius:4px;display:grid;place-items:center;text-align:center;font-size:16px}
+
+/* ---------- inputs ---------- */
+.field{display:flex;align-items:center;gap:12px;height:61px;padding:0 15px;border:1px solid var(--ink);border-radius:var(--r);transition:border-color .25s,box-shadow .25s}
+.field:focus-within{border-color:var(--gain);box-shadow:0 0 0 4px rgba(207,224,201,.12)}
+.field input{flex:1;min-width:0;background:none;border:0;outline:0;font-size:17px}
+.field input::placeholder{color:var(--ink-dim)}
+.field svg{width:32px;height:32px;flex:none}
+.mini{display:inline-flex;align-items:center;height:37px;width:169px;padding:0 12px;border:1px solid var(--ink);border-radius:5px;transition:border-color .25s,box-shadow .25s}
+.mini:focus-within{border-color:var(--gain);box-shadow:0 0 0 3px rgba(207,224,201,.14)}
+.mini input{width:100%;background:none;border:0;outline:0;font-size:14px}
+.mini input::-webkit-inner-spin-button{opacity:.3}
+
+/* ---------- motion primitives ---------- */
+.rise{opacity:0;transform:translateY(18px);animation:rise .8s var(--ease) forwards;animation-delay:calc(var(--i,0) * 70ms + var(--d,0ms))}
+@keyframes rise{to{opacity:1;transform:none}}
+.fade{opacity:0;animation:fade 1s var(--ease) forwards;animation-delay:var(--d,0ms)}
+@keyframes fade{to{opacity:1}}
+.words .w{display:inline-block;opacity:0;transform:translateY(.45em) rotate(2deg);filter:blur(6px);animation:word .9s var(--ease) forwards;animation-delay:calc(var(--i) * 75ms + var(--d,0ms))}
+@keyframes word{to{opacity:1;transform:none;filter:none}}
+.skeleton{position:relative;overflow:hidden;background:var(--sand)}
+.skeleton::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-100%);animation:shimmer 1.6s infinite}
+@keyframes shimmer{to{transform:translateX(100%)}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}
+  .rise,.fade,.words .w{opacity:1;transform:none;filter:none}
+}
+
+/* ---------- SI disclosure footer (every page) ---------- */
+.si-note{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;padding:14px var(--gutter) 18px;font-size:11px;line-height:1.5;color:var(--ink-mute)}
+.si-note a{color:var(--ink-dim);text-underline-offset:3px;transition:color .2s}
+.si-note a:hover{color:var(--ink)}

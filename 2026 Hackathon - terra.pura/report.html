@@ -1,0 +1,134 @@
+<!doctype html>
+<!-- terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- shared metadata -->
+<meta name="description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta name="keywords" content="agriculture, farming, crop planning, NASA, Earth science, climate data, soil, education, NASA Space Apps Challenge">
+<meta name="author" content="terra.pura team">
+<meta name="generator" content="Super Intelligence (SI): Claude by Anthropic">
+<meta name="si-disclosure" content="Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.">
+<meta name="rating" content="general">
+<meta name="robots" content="noindex, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1f1f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="terra.pura">
+<meta property="og:title" content="terra.pura: changing how you see agriculture">
+<meta property="og:description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta property="og:url" content="https://terrapura.sorila.dev/report.html">
+<meta property="og:image" content="https://terrapura.sorila.dev/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://terrapura.sorila.dev/report.html">
+<!-- /shared metadata -->
+<title>Cost report — terra.pura</title>
+<script>
+  try { const s = JSON.parse(localStorage.getItem('terrapura.v1')) || {}; if (!(s.onboardedAt && s.land && s.land.length >= 3)) location.replace('index.html'); else if (s.dataFor !== s.center.join(',')) location.replace('complete.html'); } catch (e) { location.replace('index.html'); }
+</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  main{padding:38px var(--gutter) var(--gutter);display:grid;gap:15px;max-width:1400px}
+  h1{margin:0 0 6px;font:400 clamp(30px,3vw,44px)/1.2 var(--display)}
+  .lede{margin:0;color:var(--ink-dim);font-size:14px;max-width:820px;line-height:1.55}
+  .back{font-size:13px;text-decoration:none;color:var(--ink-dim);display:inline-flex;gap:6px;align-items:center}
+  .back svg{width:16px;height:16px}
+  .tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .tools .btn{height:40px;min-width:0;font-size:13px;padding:0 18px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips button{height:32px;padding:0 12px;border-radius:99px;border:1px solid var(--line-soft);background:none;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:background .25s,border-color .25s,color .25s}
+  .chips button i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+  .chips button:hover{border-color:var(--ink)}
+  .chips button[aria-pressed=true]{background:var(--ink);color:var(--dark-ink);border-color:var(--ink)}
+  .panel{opacity:0;animation:rise .8s var(--ease) forwards;animation-delay:calc(var(--i) * 90ms + 150ms)}
+  .panel h2{margin:0 0 4px}
+  .sub{font-size:12px;color:var(--ink-mute);margin:0 0 16px;line-height:1.5}
+  .kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+  .kpis div{font-size:11px;color:var(--ink-mute)}
+  .kpis b{display:block;font:400 24px/1.25 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+  .stack{display:flex;height:22px;border-radius:5px;overflow:hidden;margin:18px 0 8px;background:rgba(255,255,255,.05)}
+  .stack span{transform-origin:left;animation:barin .9s var(--ease) both}
+  @keyframes barin{from{transform:scaleX(0)}}
+  .legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11px;color:var(--ink-mute)}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{font-weight:400;text-align:right;color:var(--ink-mute);font-size:11px;padding:0 8px 8px;white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  td{padding:9px 8px;border-top:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums;vertical-align:top}
+  tr.how td{border-top:0;padding-top:0;text-align:left;font-size:11.5px;color:var(--ink-dim);line-height:1.55}
+  tr.how ul{margin:0 0 4px;padding-left:16px}
+  tr.how .as{color:var(--ink-mute)}
+  tr.how .as::before{content:"Assumes: ";color:#e0b456}
+  tr.how a,tr.how button{color:var(--gain);font-size:11.5px;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+  tr.tot td{border-top:1px solid var(--ink);font-weight:500}
+  .neg{color:var(--cost)}.pos{color:var(--gain)}
+  .scroll{overflow-x:auto}
+  .cmp td:first-child{white-space:nowrap}
+  .cmp tr.sel td{background:rgba(207,224,201,.07)}
+  .cmp tbody tr{cursor:pointer}
+  .cmp tbody tr:hover td{background:rgba(255,255,255,.03)}
+  .assume{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:4px 30px;margin:0;padding:0;list-style:none;font-size:12.5px;color:var(--ink-dim);line-height:1.5}
+  .assume li{padding:8px 0;border-top:1px solid var(--line-soft)}
+  .assume b{display:block;font-weight:400;color:var(--ink);font-size:13px}
+  .assume small{color:var(--ink-mute)}
+  @media (max-width:800px){.kpis{grid-template-columns:1fr 1fr}}
+  @media print{
+    .topbar,.tools,.si-note,.chips{display:none}
+    body{background:#fff;color:#111}
+    .panel{opacity:1;animation:none;border-color:#999;break-inside:avoid}
+    :root{--ink:#111;--ink-dim:#333;--ink-mute:#666;--line-soft:#ccc;--line:#999}
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dash.html">terra<span class="dot">.</span>pura</a>
+  <a class="back fade" href="dash.html"><span data-icon="back"></span>Dashboard</a>
+</header>
+<main>
+  <div>
+    <h1 data-words>Cost report</h1>
+    <p class="lede rise" style="--d:300ms" id="lede">Every cost behind each crop, how we calculated it, and what we had to assume.</p>
+  </div>
+  <div class="tools rise" style="--d:400ms">
+    <button class="btn ghost" id="editWages">Edit staff &amp; wages</button>
+    <a class="btn ghost" href="settings.html">Change providers, machinery &amp; storage</a>
+    <button class="btn ghost" id="print">Print / save as PDF</button>
+  </div>
+  <div class="chips rise" style="--d:450ms" id="chips" aria-label="Crop"></div>
+
+  <section class="panel" style="--i:0">
+    <h2 id="sumTitle">Summary</h2>
+    <p class="sub" id="sumSub"></p>
+    <div class="kpis" id="kpis"></div>
+    <div class="stack" id="stack"></div>
+    <div class="legend" id="legend"></div>
+  </section>
+
+  <section class="panel" style="--i:1">
+    <h2>Itemised costs</h2>
+    <p class="sub">One growing cycle. Each line shows the working; yellow notes are assumptions you can replace with your own figures.</p>
+    <div class="scroll"><table id="items"></table></div>
+  </section>
+
+  <section class="panel" style="--i:2">
+    <h2>All crops compared</h2>
+    <p class="sub" id="cmpSub">Same land, same providers and wages. Click a row to open its report.</p>
+    <div class="scroll"><table class="cmp" id="cmp"></table></div>
+  </section>
+
+  <section class="panel" style="--i:3">
+    <h2>Assumptions behind every number</h2>
+    <p class="sub">What the estimates rest on, where each figure comes from, and whether you can change it.</p>
+    <ul class="assume" id="assume"></ul>
+  </section>
+</main>
+<script type="module" src="assets/js/report.js"></script>
+<footer class="si-note"><span>Code generated with Super Intelligence (SI): Claude by Anthropic, from the terra.pura team's designs.</span> <span>Data: NASA POWER · SoilGrids · Open-Meteo · OpenStreetMap · FAOSTAT.</span> <a href="about.html">About &amp; disclosure</a> <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>

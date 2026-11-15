@@ -1,0 +1,86 @@
+<!doctype html>
+<!-- terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- shared metadata -->
+<meta name="description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta name="keywords" content="agriculture, farming, crop planning, NASA, Earth science, climate data, soil, education, NASA Space Apps Challenge">
+<meta name="author" content="terra.pura team">
+<meta name="generator" content="Super Intelligence (SI): Claude by Anthropic">
+<meta name="si-disclosure" content="Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.">
+<meta name="rating" content="general">
+<meta name="robots" content="index, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1f1f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="terra.pura">
+<meta property="og:title" content="terra.pura: changing how you see agriculture">
+<meta property="og:description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta property="og:url" content="https://terrapura.sorila.dev/">
+<meta property="og:image" content="https://terrapura.sorila.dev/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://terrapura.sorila.dev/">
+<!-- /shared metadata -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "terra.pura", "url": "https://terrapura.sorila.dev/", "description": "terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "inLanguage": "en", "audience": {"@type": "Audience", "audienceType": "Farmers, students, NASA Space Apps judges"}, "about": ["Agriculture", "Earth science", "Climate", "Soil science"], "creator": {"@type": "Organization", "name": "terra.pura team"}, "contributor": {"@type": "SoftwareApplication", "name": "Claude", "creator": {"@type": "Organization", "name": "Anthropic"}, "description": "Super Intelligence (SI) code-generation tool used to write this site's code"}, "creditText": "Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.", "isBasedOn": ["https://power.larc.nasa.gov/", "https://soilgrids.org/", "https://open-meteo.com/", "https://www.openstreetmap.org/", "https://www.fao.org/faostat/"]}</script>
+<title>terra.pura — changing how you see agriculture</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  body{min-height:100vh;display:flex;flex-direction:column}
+  .hero-bg{position:fixed;inset:-4% 0 0 0;z-index:0;overflow:hidden;pointer-events:none}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);
+    mask-image:linear-gradient(0deg,#000 0%,transparent 100%);-webkit-mask-image:linear-gradient(0deg,#000 0%,transparent 100%);
+    animation:hero-in 2.4s var(--ease) .1s forwards, drift 40s ease-in-out 2.5s infinite alternate}
+  @keyframes hero-in{to{opacity:.6;transform:scale(1.03)}}
+  @keyframes drift{from{transform:scale(1.03) translate(0,0)}to{transform:scale(1.09) translate(-1.5%,-1%)}}
+  .hero{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(60px,12vh,168px) var(--gutter) 40px}
+  h1{margin:0;max-width:560px;font:400 clamp(38px,5vw,56px)/1.35 var(--display);letter-spacing:-.015em}
+  .lede{margin:17px 0 0;max-width:431px;font-size:16px}
+  .cta{margin-top:auto;padding-top:60px}
+  .credit{position:relative;z-index:1;align-self:flex-end;margin:0 var(--gutter) 30px;font-size:16px;opacity:.85}
+  .credit a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
+  .credit a:hover{border-color:currentColor}
+  .scroll-hint{display:flex;gap:8px;justify-content:center;margin-top:28px;font-size:13px;color:var(--ink-dim)}
+  .scroll-hint span{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--line-soft);border-radius:99px;backdrop-filter:blur(6px)}
+  .scroll-hint i{width:6px;height:6px;border-radius:50%;background:var(--gain);animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.25;transform:scale(.6)}}
+  @media (max-width:600px){.btn.lg{min-width:0;width:100%}.credit{align-self:center;font-size:13px}}
+</style>
+</head>
+<body>
+  <div class="hero-bg" aria-hidden="true"><img src="assets/img/hero.jpg" alt=""></div>
+
+  <header class="topbar"><a class="brand fade" href="index.html">terra<span class="dot">.</span>pura</a></header>
+
+  <main class="hero">
+    <h1 data-words data-delay="250">changing how you see agriculture</h1>
+    <p class="lede rise" style="--d:850ms">find out what's worth growing with our world-class data analysis services</p>
+    <div class="scroll-hint rise" style="--d:1050ms" aria-hidden="true">
+      <span><i></i>NASA POWER</span><span><i style="animation-delay:.4s"></i>Soil data</span><span><i style="animation-delay:.8s"></i>Live weather</span>
+    </div>
+    <div class="cta rise" style="--d:1250ms">
+      <a class="btn lg" href="onboarding.html" id="getStarted">Get started <span data-icon="arrow"></span></a>
+    </div>
+  </main>
+
+  <p class="credit fade" style="--d:1600ms">Photo by <a href="https://unsplash.com/@polinakuzovkova" target="_blank" rel="noopener">Polina Kuzovkova</a> on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+
+<script type="module">
+  import { initUI, icons } from './assets/js/ui.js';
+  document.querySelectorAll('[data-icon]').forEach(el => (el.outerHTML = icons[el.dataset.icon]));
+  initUI();
+  // returning visitors choose: continue, open a saved farm, or start a new one
+  document.getElementById('getStarted').addEventListener('click', async ev => {
+    ev.preventDefault();
+    const shown = await import('./assets/js/farm-picker.js').then(m => m.maybeShowFarmPicker()).catch(() => false);
+    if (!shown) location.href = 'onboarding.html';
+  });
+</script>
+<footer class="si-note"><span>Code generated with Super Intelligence (SI): Claude by Anthropic, from the terra.pura team's designs.</span> <span>Data: NASA POWER · SoilGrids · Open-Meteo · OpenStreetMap · FAOSTAT.</span> <a href="about.html">About &amp; disclosure</a> <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>

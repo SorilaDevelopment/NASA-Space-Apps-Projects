@@ -1,0 +1,133 @@
+<!doctype html>
+<!-- terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- shared metadata -->
+<meta name="description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta name="keywords" content="agriculture, farming, crop planning, NASA, Earth science, climate data, soil, education, NASA Space Apps Challenge">
+<meta name="author" content="terra.pura team">
+<meta name="generator" content="Super Intelligence (SI): Claude by Anthropic">
+<meta name="si-disclosure" content="Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.">
+<meta name="rating" content="general">
+<meta name="robots" content="noindex, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1f1f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="terra.pura">
+<meta property="og:title" content="terra.pura: changing how you see agriculture">
+<meta property="og:description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta property="og:url" content="https://terrapura.sorila.dev/solar.html">
+<meta property="og:image" content="https://terrapura.sorila.dev/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://terrapura.sorila.dev/solar.html">
+<!-- /shared metadata -->
+<title>Solar planner — terra.pura</title>
+<script>
+  try { const s = JSON.parse(localStorage.getItem('terrapura.v1')) || {}; if (!(s.onboardedAt && s.land && s.land.length >= 3)) location.replace('index.html'); else if (s.dataFor !== s.center.join(',')) location.replace('complete.html'); } catch (e) { location.replace('index.html'); }
+</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  main{display:grid;grid-template-columns:400px minmax(0,1fr);gap:15px;padding:38px var(--gutter) var(--gutter);align-items:start}
+  .head{grid-column:1/-1}
+  h1{margin:0 0 6px;font:400 clamp(30px,3vw,44px)/1.2 var(--display)}
+  .lede{margin:0;color:var(--ink-dim);font-size:14px;max-width:780px;line-height:1.55}
+  .lede b{color:var(--ink);font-weight:400}
+  .back{font-size:13px;text-decoration:none;color:var(--ink-dim);display:inline-flex;gap:6px;align-items:center}
+  .back svg{width:16px;height:16px}
+  .panel{opacity:0;animation:rise .8s var(--ease) forwards;animation-delay:calc(var(--i) * 90ms + 150ms)}
+  .ctl{display:grid;gap:18px;border-radius:var(--r) 0 0 var(--r)}
+  .ctl h2{margin:0}
+  .seg{display:flex;flex-wrap:wrap;gap:6px}
+  .seg button{height:34px;padding:0 12px;border-radius:99px;border:1px solid var(--line-soft);background:none;font-size:12px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+  .seg button:hover{border-color:var(--ink)}
+  .seg button[aria-pressed=true]{background:var(--ink);color:var(--dark-ink);border-color:var(--ink)}
+  .note{font-size:12px;color:var(--ink-mute);margin:-8px 0 0;line-height:1.5}
+  label{display:grid;gap:6px;font-size:13px}
+  .lab{display:flex;justify-content:space-between;color:var(--ink-dim)}
+  .lab b{font-weight:400;color:var(--ink);font-variant-numeric:tabular-nums}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:20px;background:none;cursor:pointer}
+  input[type=range]::-webkit-slider-runnable-track{height:3px;border-radius:3px;background:linear-gradient(90deg,var(--ink) var(--p,0%),var(--line-soft) var(--p,0%))}
+  input[type=range]::-moz-range-track{height:3px;border-radius:3px;background:var(--line-soft)}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;margin-top:-5.5px;border-radius:50%;background:var(--ink);transition:transform .2s var(--ease-spring)}
+  input[type=range]:hover::-webkit-slider-thumb{transform:scale(1.3)}
+  .num{display:flex;align-items:center;gap:8px}
+  .num input{width:110px;height:34px;border:1px solid var(--line-soft);border-radius:6px;background:none;padding:0 10px;font-size:13px}
+  .fit{height:38px;min-width:0;font-size:13px}
+  .out{display:grid;gap:15px}
+  .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;border-radius:0 var(--r) 0 0}
+  .kpis div{font-size:12px;color:var(--ink-dim)}
+  .kpis b{display:block;font:400 28px/1.15 var(--display);color:var(--ink);font-variant-numeric:tabular-nums;margin-bottom:4px}
+  .pay{grid-column:1/-1;font:400 18px/1.3 var(--display);padding-top:6px;border-top:1px solid var(--line-soft)}
+  .pay.ok{color:var(--gain)}.pay.no{color:var(--cost)}
+  .cashp{border-radius:0}
+  .legend{display:flex;flex-wrap:wrap;gap:16px;font-size:11px;color:var(--ink-mute);margin:4px 0 10px}
+  .legend i{display:inline-block;width:12px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+  #cash{display:block;width:100%;height:300px;overflow:visible}
+  #cash text{font:10px Inter,sans-serif;fill:#9b9892}
+  #cash .ln{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s var(--ease) forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:15px}
+  .split .panel:last-child{border-radius:0 0 var(--r) 0}
+  #genChart{height:170px;margin-top:30px}
+  .assume{grid-column:1/-1;font-size:12px;color:var(--ink-mute);line-height:1.6;margin:0}
+  @media (max-width:1100px){main{grid-template-columns:1fr}.ctl,.kpis,.cashp,.split .panel{border-radius:var(--r)}.split{grid-template-columns:1fr}}
+  @media (max-width:600px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dash.html">terra<span class="dot">.</span>pura</a>
+  <a class="back fade" href="dash.html"><span data-icon="back"></span>Dashboard</a>
+</header>
+<main>
+  <div class="head">
+    <h1 data-words>Solar panel planner</h1>
+    <p class="lede rise" style="--d:300ms" id="ctx">Loading your farm…</p>
+  </div>
+
+  <section class="panel ctl" style="--i:0">
+    <h2>Your panels</h2>
+    <div class="seg" id="mounts" aria-label="Where the panels go"></div>
+    <p class="note" id="mountNote"></p>
+    <label><span class="lab">Panel size <b id="wattsV"></b></span><input type="range" id="watts" min="250" max="700" step="10"></label>
+    <label><span class="lab">Number of panels <b id="panelsV"></b></span><input type="range" id="panels" min="1" max="500" step="1"></label>
+    <button class="btn ghost fit" id="fit">Size it to cover my farm's electricity</button>
+    <label><span class="lab">Installed cost <b id="costWV"></b></span><span class="num"><span data-cur></span><input type="number" id="costW" min="0" step="0.05"> per watt</span></label>
+    <label><span class="lab">Electricity you buy <b id="priceV"></b></span><span class="num"><span data-cur></span><input type="number" id="price" min="0" step="0.001"> per kWh</span></label>
+    <label><span class="lab">Export rate (what the grid pays you) <b id="exportPriceV"></b></span><span class="num"><span data-cur></span><input type="number" id="exportPrice" min="0" step="0.001"> per kWh</span></label>
+    <label><span class="lab">Farm electricity use <b id="demandV"></b></span><span class="num"><input type="number" id="demand" min="0" step="100"> kWh a year</span></label>
+    <label><span class="lab">Electricity price rise <b id="escalateV"></b></span><input type="range" id="escalate" min="0" max="8" step="0.5"></label>
+  </section>
+
+  <div class="out">
+    <section class="panel kpis" style="--i:1">
+      <div><b id="kKwp">—</b>system size</div>
+      <div><b id="kGen">—</b>generated in year 1</div>
+      <div><b id="kCost">—</b>panels, installed</div>
+      <div><b id="kLand">—</b>farmland used</div>
+      <div><b id="kLost">—</b>crop sales lost</div>
+      <div><b id="kNet">—</b>net after 25 years</div>
+      <p class="pay" id="kPay"></p>
+    </section>
+    <section class="panel cashp" style="--i:2">
+      <h2 style="margin:0">Money over 25 years</h2>
+      <div class="legend" id="legend"></div>
+      <svg id="cash" role="img" aria-label="Cumulative savings, spending, lost crop profit and net position over 25 years"></svg>
+    </section>
+    <div class="split">
+      <section class="panel" style="--i:3"><h2 style="margin:0">Generation by month</h2><div id="genChart"></div></section>
+      <section class="panel" style="--i:4"><h2>Breakdown</h2><div id="detail"></div></section>
+    </div>
+  </div>
+  <p class="assume">How we calculate it: sunlight is NASA POWER's all-sky surface irradiance for your field (kWh/m² per day), raised 10% for tilted panels, with 80% system efficiency and 0.5% panel ageing a year. Electricity you use yourself is valued at your tariff; the rest at the export rate, both rising with the price-rise setting. Upkeep is 1% of the install cost a year, plus an inverter replacement (10%) in year 12. Crop losses use the profit per m² from your dashboard's year-round plan. Default costs per watt are typical 2025–26 farm-scale prices; edit them for your quote.</p>
+</main>
+<script type="module" src="assets/js/solar.js"></script>
+<footer class="si-note"><span>Code generated with Super Intelligence (SI): Claude by Anthropic, from the terra.pura team's designs.</span> <span>Data: NASA POWER · SoilGrids · Open-Meteo · OpenStreetMap · FAOSTAT.</span> <a href="about.html">About &amp; disclosure</a> <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>

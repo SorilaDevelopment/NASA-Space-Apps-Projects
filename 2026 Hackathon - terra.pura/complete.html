@@ -1,0 +1,117 @@
+<!doctype html>
+<!-- terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- shared metadata -->
+<meta name="description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta name="keywords" content="agriculture, farming, crop planning, NASA, Earth science, climate data, soil, education, NASA Space Apps Challenge">
+<meta name="author" content="terra.pura team">
+<meta name="generator" content="Super Intelligence (SI): Claude by Anthropic">
+<meta name="si-disclosure" content="Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.">
+<meta name="rating" content="general">
+<meta name="robots" content="noindex, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1f1f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="terra.pura">
+<meta property="og:title" content="terra.pura: changing how you see agriculture">
+<meta property="og:description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta property="og:url" content="https://terrapura.sorila.dev/complete.html">
+<meta property="og:image" content="https://terrapura.sorila.dev/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://terrapura.sorila.dev/complete.html">
+<!-- /shared metadata -->
+<title>Compiling your data — terra.pura</title>
+<script>
+  try { const s = JSON.parse(localStorage.getItem('terrapura.v1')) || {}; if (!(s.onboardedAt && s.land && s.land.length >= 3)) location.replace('onboarding.html'); } catch (e) { location.replace('onboarding.html'); }
+</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  body{min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden}
+  .bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+  .bg img{width:100%;height:100%;object-fit:cover;mask-image:linear-gradient(0deg,#000,transparent);-webkit-mask-image:linear-gradient(0deg,#000,transparent);opacity:0;transform:scale(1.08);animation:in 2s var(--ease) forwards,breathe 14s ease-in-out 2s infinite alternate}
+  @keyframes in{to{opacity:1;transform:scale(1)}}
+  @keyframes breathe{to{transform:scale(1.05)}}
+  main{position:relative;z-index:1;margin-top:auto;padding:0 var(--gutter) var(--gutter);display:grid;grid-template-columns:minmax(0,985px) minmax(260px,420px);gap:40px;align-items:end;justify-content:space-between}
+  h1{margin:0;font:400 clamp(34px,4.2vw,56px)/1.35 var(--display);letter-spacing:-.01em}
+  .tasks{list-style:none;margin:0;padding:22px 24px;border-radius:var(--r);background:rgba(31,31,31,.72);backdrop-filter:blur(10px);border:1px solid var(--line-soft)}
+  .tasks li{display:flex;align-items:center;gap:12px;font-size:14px;padding:7px 0;color:var(--ink-mute);transition:color .4s}
+  .tasks li .s{position:relative;width:18px;height:18px;flex:none;border-radius:50%;border:1.5px solid var(--line-soft)}
+  .tasks li.run{color:var(--ink)}
+  .tasks li.run .s{border-color:var(--ink);border-right-color:transparent;animation:spin .8s linear infinite}
+  .tasks li.ok{color:var(--ink-dim)}
+  .tasks li.ok .s{border-color:var(--gain);background:var(--gain);animation:tick .4s var(--ease-spring)}
+  .tasks li small{display:block;font-size:11px;color:var(--ink-mute);margin-top:1px}
+  .tasks li.warn .s{border-color:#e0b456;background:#e0b456}
+  .tasks li.warn{color:var(--ink-dim)}
+  .tasks li.ok .s::after{content:"";position:absolute;left:5px;top:2px;width:4px;height:8px;border:solid var(--dark-ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes tick{from{transform:scale(.3)}}
+  .credit{position:relative;z-index:1;align-self:flex-end;margin:18px var(--gutter) 0;font-size:14px;opacity:.85}
+  .credit a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
+  .credit a:hover{border-color:currentColor}
+  @media (max-width:600px){.credit{align-self:center;font-size:12px}}
+  .bar{height:2px;background:var(--line-soft);margin-top:14px;border-radius:2px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--gain);transition:width .6s var(--ease)}
+  @media (max-width:900px){main{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><img src="assets/img/loading.jpg" alt=""></div>
+  <header class="topbar"><a class="brand fade" href="index.html">terra<span class="dot">.</span>pura</a></header>
+  <main>
+    <h1 data-words data-delay="200">thank you for answering, please wait as we compile your data!</h1>
+    <div class="rise" style="--d:900ms">
+      <ul class="tasks" id="tasks" aria-live="polite">
+        <li data-k="climate"><span class="s"></span><span>NASA POWER climate history <small></small></span></li>
+        <li data-k="soil"><span class="s"></span><span>Soil pH &amp; fertility (SoilGrids) <small></small></span></li>
+        <li data-k="weather"><span class="s"></span><span>16-day weather forecast <small></small></span></li>
+        <li data-k="land"><span class="s"></span><span>Buildings &amp; roads on your land (OpenStreetMap) <small></small></span></li>
+        <li data-k="prices"><span class="s"></span><span>Local crop prices &amp; exchange rates <small></small></span></li>
+        <li data-k="model"><span class="s"></span><span>Scoring 18 crops for your land <small></small></span></li>
+      </ul>
+      <div class="bar"><i id="bar"></i></div>
+    </div>
+  </main>
+  <p class="credit fade" style="--d:1200ms">Photo by Chris Ensminger on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+<script type="module">
+  import { initUI, store } from './assets/js/ui.js';
+  import { nasaClimate, soil, forecast, landUse, fxRates, cropPrices } from './assets/js/data.js';
+  import { inputs, bestNow } from './assets/js/model.js';
+  initUI();
+  const s = store.get(), [lat, lon] = s.center;
+  const li = k => document.querySelector(`#tasks li[data-k="${k}"]`), bar = document.getElementById('bar');
+  let done = 0;
+  const finish = (k, cls, msg) => { const el = li(k); el.className = cls; el.querySelector('small').textContent = msg || ''; bar.style.width = (++done / 6 * 100) + '%'; };
+  async function task(k, fn, okMsg, failMsg) {
+    li(k).className = 'run';
+    try { const v = await fn(); finish(k, 'ok', okMsg(v)); return v; }
+    catch (e) { console.warn(k, e); finish(k, 'warn', failMsg); return null; }
+  }
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  await wait(900);
+  const [climate, soilData, fc, land, money] = await Promise.all([
+    task('climate', () => nasaClimate(lat, lon), c => `${c.annual.t.toFixed(1)} °C average · ${c.annual.p} mm rain a year`, 'NASA POWER didn’t answer — using a sample climate'),
+    task('soil', () => soil(lat, lon), d => `pH ${d.ph} · organic carbon ${d.soc?.toFixed(0)} g/kg · fertility ${d.fertilityLabel}`, 'No soil data here — assuming pH 6.5 (you can edit it)'),
+    task('weather', () => forecast(lat, lon), f => `${Math.round(f.rain.reduce((a, b) => a + (b || 0), 0))} mm rain · lows of ${Math.min(...f.tmin).toFixed(0)} °C ahead`, 'Forecast unavailable — using climate averages'),
+    task('land', () => landUse(s.land), l => l.nBuildings != null ? `${Math.round(l.growable).toLocaleString()} m² growable (${l.nBuildings} buildings, roads & water removed)` : l.note, 'OpenStreetMap busy — using your full area'),
+    task('prices', async () => ({ prices: await cropPrices(), fx: s.fx || await fxRates() }), m => `FAOSTAT farm-gate prices · ${s.region?.currency || 'USD'} rate ${(m.fx.rates[s.region?.currency] || 1).toFixed(3)}/USD`, 'Price data unavailable'),
+  ]);
+  store.set({ climate: climate || null, soil: soilData || null, forecast: fc || null, landUse: land || null, fx: money?.fx || s.fx || null, dataFor: s.center.join(','), fetchedAt: Date.now() });
+  await task('model', async () => {
+    await wait(50);
+    const r = bestNow(inputs(store.get(), money?.prices));
+    return r[0];
+  }, top => `Top pick right now: ${top.crop.name}`, 'Scoring failed');
+  await wait(1400);
+  location.href = 'dash.html';
+</script>
+<footer class="si-note"><span>Code generated with Super Intelligence (SI): Claude by Anthropic, from the terra.pura team's designs.</span> <span>Data: NASA POWER · SoilGrids · Open-Meteo · OpenStreetMap · FAOSTAT.</span> <a href="about.html">About &amp; disclosure</a> <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>

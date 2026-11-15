@@ -1,0 +1,27 @@
+{
+ "name": "terra.pura",
+ "short_name": "terra.pura",
+ "description": "Find out what's worth growing on your land.",
+ "start_url": "./index.html",
+ "display": "standalone",
+ "background_color": "#1f1f1f",
+ "theme_color": "#1f1f1f",
+ "icons": [
+  {
+   "src": "assets/img/favicon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml",
+   "purpose": "any"
+  },
+  {
+   "src": "assets/img/apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "assets/img/favicon-48.png",
+   "sizes": "48x48",
+   "type": "image/png"
+  }
+ ]
+}

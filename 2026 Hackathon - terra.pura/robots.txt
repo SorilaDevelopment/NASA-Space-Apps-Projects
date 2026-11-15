@@ -1,0 +1,4 @@
+# terra.pura: educational NASA Space Apps Challenge 2026 project. All crawlers welcome.
+User-agent: *
+Allow: /
+Sitemap: https://terrapura.sorila.dev/sitemap.xml

@@ -1,0 +1,121 @@
+<!doctype html>
+<!-- terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- shared metadata -->
+<meta name="description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta name="keywords" content="agriculture, farming, crop planning, NASA, Earth science, climate data, soil, education, NASA Space Apps Challenge">
+<meta name="author" content="terra.pura team">
+<meta name="generator" content="Super Intelligence (SI): Claude by Anthropic">
+<meta name="si-disclosure" content="Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.">
+<meta name="rating" content="general">
+<meta name="robots" content="noindex, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1f1f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="terra.pura">
+<meta property="og:title" content="terra.pura: changing how you see agriculture">
+<meta property="og:description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta property="og:url" content="https://terrapura.sorila.dev/satellite.html">
+<meta property="og:image" content="https://terrapura.sorila.dev/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://terrapura.sorila.dev/satellite.html">
+<!-- /shared metadata -->
+<title>Satellite & crop health — terra.pura</title>
+<script>
+  try { const s = JSON.parse(localStorage.getItem('terrapura.v1')) || {}; if (!(s.onboardedAt && s.land && s.land.length >= 3)) location.replace('index.html'); else if (s.dataFor !== s.center.join(',')) location.replace('complete.html'); } catch (e) { location.replace('index.html'); }
+</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<style>
+  main{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:15px;padding:38px var(--gutter) var(--gutter);align-items:start}
+  .head{grid-column:1/-1}
+  h1{margin:0 0 6px;font:400 clamp(30px,3vw,44px)/1.2 var(--display)}
+  .lede{margin:0;color:var(--ink-dim);font-size:14px;max-width:820px;line-height:1.55}
+  .back{font-size:13px;text-decoration:none;color:var(--ink-dim);display:inline-flex;gap:6px;align-items:center}
+  .back svg{width:16px;height:16px}
+  .panel{opacity:0;animation:rise .8s var(--ease) forwards;animation-delay:calc(var(--i) * 90ms + 150ms)}
+  .panel h2{margin:0 0 4px}
+  .sub{font-size:12px;color:var(--ink-mute);margin:0 0 14px;line-height:1.5}
+  .mapp{padding:0;overflow:hidden;border-radius:var(--r) 0 0 var(--r)}
+  #satMap{height:min(72vh,640px);min-height:380px;background:#111}
+  .layers{position:absolute;z-index:500;top:14px;left:14px;right:60px;display:flex;flex-wrap:wrap;gap:6px;pointer-events:none}
+  .layers button{pointer-events:auto;height:32px;padding:0 13px;border-radius:99px;border:1px solid rgba(255,255,255,.35);background:rgba(20,20,20,.88);color:#fff;font-size:12px;cursor:pointer;backdrop-filter:blur(6px);transition:background .2s,color .2s}
+  .layers button[aria-pressed=true]{background:#fff;color:#111;border-color:#fff}
+  .datebar{position:absolute;z-index:500;left:14px;bottom:14px;display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:99px;background:rgba(20,20,20,.9);color:#fff;font-size:12px;backdrop-filter:blur(6px)}
+  .datebar[hidden]{display:none}
+  .datebar button{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:none;color:#fff;cursor:pointer}
+  .datebar button[disabled]{opacity:.3}
+  .datebar span{min-width:150px;text-align:center}
+  .legend{position:absolute;z-index:500;right:14px;bottom:14px;padding:8px 10px;border-radius:8px;background:rgba(20,20,20,.9);color:#ddd;font-size:11px}
+  .legend[hidden]{display:none}
+  .legend .ramp{width:160px;height:8px;border-radius:4px;background:linear-gradient(90deg,#f1ecec,#d9c58a,#a6c76a,#4f9a3a,#0a5a12,#002400);margin:4px 0}
+  .legend .ends{display:flex;justify-content:space-between}
+  .health{border-radius:0 var(--r) var(--r) 0}
+  .kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:4px 0 16px}
+  .kpis div{font-size:11px;color:var(--ink-mute)}
+  .kpis b{display:block;font:400 26px/1.2 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+  .verdict{font-size:13.5px;line-height:1.55;color:var(--ink-dim);margin:0 0 16px}
+  #ndviChart{display:block;width:100%;height:230px;overflow:visible}
+  #ndviChart text{font:10px Inter,sans-serif;fill:#9b9892}
+  .keys{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11px;color:var(--ink-mute);margin:6px 0 0}
+  .keys i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
+  details.assume{margin-top:16px;font-size:12px;color:var(--ink-dim)}
+  details.assume summary{cursor:pointer;color:#e0b456}
+  details.assume ul{margin:8px 0 0;padding-left:18px;line-height:1.55}
+  .loading{font-size:13px;color:var(--ink-mute);display:flex;gap:10px;align-items:center}
+  .loading::before{content:"";width:14px;height:14px;border-radius:50%;border:2px solid var(--line-soft);border-top-color:var(--gain);animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .foot{grid-column:1/-1;font-size:12px;color:var(--ink-mute);line-height:1.6;margin:0}
+  @media (max-width:1000px){main{grid-template-columns:1fr}.mapp,.health{border-radius:var(--r)}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dash.html">terra<span class="dot">.</span>pura</a>
+  <a class="back fade" href="dash.html"><span data-icon="back"></span>Dashboard</a>
+</header>
+<main>
+  <div class="head">
+    <h1 data-words>Your land from orbit</h1>
+    <p class="lede rise" style="--d:300ms">NASA satellite pictures of your field and how green it has been over the last few years. Greenness (NDVI) is how satellites measure how much healthy, growing plant cover there is.</p>
+  </div>
+
+  <section class="panel mapp" style="--i:0;position:relative">
+    <div id="satMap" aria-label="Satellite map of your land"></div>
+    <div class="layers" id="layers" role="group" aria-label="Map layer">
+      <button data-l="photo" aria-pressed="true">Satellite photo</button>
+      <button data-l="hls" aria-pressed="false">NASA true colour · 30 m</button>
+      <button data-l="ndvi" aria-pressed="false">NASA greenness · 250 m</button>
+      <button data-l="map" aria-pressed="false">Map</button>
+    </div>
+    <div class="datebar" id="datebar" hidden><button id="dPrev" aria-label="Older image">‹</button><span id="dLabel">—</span><button id="dNext" aria-label="Newer image">›</button></div>
+    <div class="legend" id="legend" hidden>Greenness (NDVI)<div class="ramp"></div><div class="ends"><span>0 bare</span><span>0.5</span><span>1 dense</span></div></div>
+  </section>
+
+  <section class="panel health" style="--i:1">
+    <h2>Crop health from orbit</h2>
+    <p class="sub" id="hSub">NASA MODIS Terra, 16-day greenness for your field.</p>
+    <div id="hBody"><p class="loading">Reading NASA satellite tiles for your field…</p></div>
+    <details class="assume"><summary>What this assumes</summary><ul>
+      <li>MODIS pixels are 250 m across, so on a small field the reading mixes in hedges, roads and neighbouring land. On fields over about 10 ha it's mostly your crop.</li>
+      <li>Values are read from NASA GIBS map tiles; each colour stands for an NDVI band 0.01 wide.</li>
+      <li>"Usual" is the average for the same time of year in the previous years shown.</li>
+      <li>Cloud-covered or snowy periods are left out by NASA, so some dates are missing.</li>
+      <li>Greenness rises with leaf cover, not yield directly; a crop ripening for harvest turns brown on purpose.</li>
+    </ul></details>
+  </section>
+
+  <p class="foot">Imagery: NASA GIBS: Harmonized Landsat Sentinel-2 (HLS, NASA/USGS/ESA) true colour and MODIS Terra NDVI (MOD13Q1). Satellite photo basemap © Esri, Maxar, Earthstar Geographics. Map © OpenStreetMap contributors.</p>
+</main>
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script type="module" src="assets/js/satellite-page.js"></script>
+<footer class="si-note"><span>Code generated with Super Intelligence (SI): Claude by Anthropic, from the terra.pura team's designs.</span> <span>Data: NASA POWER · SoilGrids · Open-Meteo · OpenStreetMap · FAOSTAT.</span> <a href="about.html">About &amp; disclosure</a> <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!doctype html>
+<!-- terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- shared metadata -->
+<meta name="description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta name="keywords" content="agriculture, farming, crop planning, NASA, Earth science, climate data, soil, education, NASA Space Apps Challenge">
+<meta name="author" content="terra.pura team">
+<meta name="generator" content="Super Intelligence (SI): Claude by Anthropic">
+<meta name="si-disclosure" content="Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.">
+<meta name="rating" content="general">
+<meta name="robots" content="noindex, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1f1f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="terra.pura">
+<meta property="og:title" content="terra.pura: changing how you see agriculture">
+<meta property="og:description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta property="og:url" content="https://terrapura.sorila.dev/dash.html">
+<meta property="og:image" content="https://terrapura.sorila.dev/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://terrapura.sorila.dev/dash.html">
+<!-- /shared metadata -->
+<title>Dashboard — terra.pura</title>
+<script>
+  // Dashboard needs a finished onboarding; data is refetched if the land changed.
+  try {
+    const s = JSON.parse(localStorage.getItem('terrapura.v1')) || {};
+    if (!(s.onboardedAt && s.land && s.land.length >= 3)) location.replace('index.html');
+    else if (s.dataFor !== s.center.join(',')) location.replace('complete.html');
+  } catch (e) { location.replace('index.html'); }
+</script>
+<script type="importmap">{"imports":{"three":"./assets/vendor/three/three.module.js","three/addons/":"./assets/vendor/three/addons/"}}</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  .dash{display:grid;grid-template-columns:683fr 345fr 762fr;grid-template-rows:auto auto;gap:15px;padding:38px var(--gutter) var(--gutter)}
+  .panel{opacity:0;transform:translateY(20px);animation:rise .8s var(--ease) forwards;animation-delay:calc(var(--i) * 90ms + 150ms);transition:border-color .3s,background .3s}
+  .panel:hover{background:rgba(255,255,255,.015)}
+  .l{border-radius:var(--r) 0 0 var(--r)}.m{border-radius:0}.r{border-radius:0 var(--r) var(--r) 0}
+  .muted{color:var(--ink-mute)}
+  .topnav{display:flex;gap:20px;font-size:13px}
+  .topnav a{text-decoration:none;color:var(--ink-dim);transition:color .2s}
+  .topnav a:hover{color:var(--ink)}
+  .topnav{align-items:center;flex-wrap:wrap;justify-content:flex-end}
+
+  /* land */
+  .land{padding:0;display:flex;flex-direction:column;overflow:hidden;min-height:374px}
+  .land h2{padding:30px 30px 0;margin-bottom:6px}
+  .land h2 b{font-weight:400;font-variant-numeric:tabular-nums;color:var(--ink-dim)}
+  .land .place{padding:0 30px 18px;font-size:12px;color:var(--ink-mute)}
+  #miniMap{flex:1;min-height:260px;background:var(--sand);border-radius:0 0 0 var(--r)}
+  #miniMap .leaflet-tile-pane{filter:sepia(.25) saturate(.85)}
+  #miniMap.sat .leaflet-tile-pane{filter:none}
+  .mapwrap{position:relative}
+  .mapbtns{position:absolute;z-index:500;left:10px;bottom:10px;display:flex;gap:6px;flex-wrap:wrap}
+  .mapbtns button,.mapbtns a{height:28px;padding:0 11px;display:inline-flex;align-items:center;border-radius:99px;border:1px solid rgba(255,255,255,.35);background:rgba(20,20,20,.88);color:#fff;font-size:11.5px;cursor:pointer;text-decoration:none}
+  .mapbtns button[aria-pressed=true]{background:#fff;color:#111}
+
+  /* costs */
+  .costs{display:flex;flex-direction:column}
+  .costs h2 small{display:block;font-size:12px;color:var(--ink-mute);margin-top:3px}
+  .row b{font-weight:400;font-variant-numeric:tabular-nums;text-align:right}
+  .row.co2 b{color:var(--gain)}
+  .costs .total{margin-top:auto;padding-top:18px}
+  .crows{display:grid;gap:0;margin:0 0 6px}
+  .crow{border-top:1px solid var(--line-soft)}
+  .crow:first-child{border-top:0}
+  .crow>button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:5px 0;font-size:13px;cursor:pointer}
+  .crow>button:focus-visible{outline:2px solid var(--gain);outline-offset:2px}
+  .crow>button .l{display:inline-flex;align-items:center;gap:6px}
+  .crow>button .l i{font-style:normal;color:var(--ink-mute);font-size:10px;transition:transform .3s var(--ease)}
+  .crow.open>button .l i{transform:rotate(90deg)}
+  .crow>button b{font-weight:400;font-variant-numeric:tabular-nums;text-align:right}
+  .crow .x{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+  .crow.open .x{grid-template-rows:1fr}
+  .crow .x>div{overflow:hidden;font-size:11.5px;color:var(--ink-dim);line-height:1.5}
+  .crow .x ul{margin:2px 0 4px;padding-left:16px}
+  .crow .x .as{color:var(--ink-mute)}
+  .crow .x .as::before{content:"Assumes: ";color:#e0b456}
+  .crow .x a,.crow .x .ed{color:var(--gain);font-size:11.5px;background:none;border:0;padding:0 0 8px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;display:inline-block}
+  .crow .edbtn{margin-left:6px;font-size:11px;border:1px solid var(--line-soft);border-radius:99px;padding:1px 8px;color:var(--ink-dim)}
+  .crow .edbtn:hover{border-color:var(--ink);color:var(--ink)}
+  .clinks{margin:6px 0 0;font-size:12px}
+  .clinks a{color:var(--gain);text-underline-offset:3px}
+  .costs .total h3{margin:0 0 10px;font:400 16px/1.35 var(--body)}
+  .costs .total .big{font:400 30px/1.2 var(--display);color:var(--cost);font-variant-numeric:tabular-nums}
+
+  /* estimates */
+  .est-head{display:flex;align-items:center;gap:14px}
+  .est-head button{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 6px;border:0;border-radius:6px;background:none;color:var(--ink);cursor:pointer;font-size:12px;transition:background .25s,color .25s}
+  .est-head button svg{width:22px;height:22px;transition:transform .3s var(--ease)}
+  .est-head button:hover svg{transform:rotate(-12deg) scale(1.1)}
+  .est-head button[aria-pressed=true]{background:var(--gain);color:var(--dark-ink);padding:0 10px}
+  .est-head button[aria-pressed=true] svg{width:16px;height:16px}
+  .reset{margin-left:auto;font-size:12px;color:var(--ink-mute);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+  .reset[hidden]{display:none}
+  .est-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 40px;margin-top:20px}
+  .est-rows .row{align-items:center;min-height:26px}
+  .est-rows .row .src{display:block;font-size:10px;color:var(--ink-mute)}
+  .est-rows input{width:92px;height:26px;border:0;border-bottom:1px solid var(--gain);background:rgba(207,224,201,.07);border-radius:4px 4px 0 0;text-align:right;padding:0 6px;font:inherit;font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums;animation:fade .3s}
+  .est-rows .edited b::before{content:"edited · ";font-size:10px;color:var(--gain)}
+  .charts{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+  .chart{display:flex;flex-direction:column;margin:0}
+  .chart figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13px;margin-bottom:30px}
+  .chart figcaption small{font-size:11px;color:var(--ink-mute)}
+  .chart figcaption b{font:400 20px/1 var(--display);font-variant-numeric:tabular-nums}
+  .chart .plot{height:140px}
+  .sources{margin-top:18px;font-size:11px;color:var(--ink-mute)}
+
+  /* best now */
+  .now{grid-column:1;min-height:511px}
+  .pick{display:grid;grid-template-columns:19px 150px 1fr;gap:0 20px;align-items:start}
+  .stage3d{width:150px;height:150px;border-radius:var(--r);display:grid;place-items:center;font-size:13px;color:var(--ink-mute);border:1px dashed var(--line-soft);background:radial-gradient(circle at 50% 60%,rgba(207,224,201,.06),transparent 70%)}
+  .pick .name{font-size:13px;margin:12px 0 4px;display:flex;gap:10px;align-items:baseline}
+  .pick .name em{font-style:normal;font-size:11px;color:var(--ink-mute)}
+  .pick .why{font-size:13px;line-height:1.6;color:var(--ink-dim);margin:0}
+  .pick-in{animation:swap .5s var(--ease)}
+  @keyframes swap{from{opacity:0;transform:translateY(8px)}}
+  .list{margin:28px 0 0;padding:0;list-style:none}
+  .list li{display:grid;grid-template-columns:19px 1fr auto;gap:0 20px;align-items:center;padding:13px 0;border-top:1px solid var(--line-soft);font-size:13px;cursor:pointer;transition:padding .3s var(--ease),background .3s}
+  .list li:hover{padding-left:8px;background:linear-gradient(90deg,rgba(255,255,255,.04),transparent)}
+  .list li .risk{font-size:11px;color:var(--ink-mute);margin-left:8px}
+  .list .n{font-size:16px}
+  .money{display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums}
+  @media (max-width:560px){.list li{grid-template-columns:19px minmax(0,1fr);gap:4px 12px}.list li .money{grid-column:2;flex-wrap:wrap}.money svg{width:18px;height:18px}}
+  .money svg{width:24px;height:24px}
+  .money .c{color:var(--cost);min-width:70px}.money .g{color:var(--gain)}.money .neg{color:var(--cost)}
+
+  /* year-round */
+  .year{grid-column:2/4;border-radius:0 var(--r) var(--r) 0;display:grid;grid-template-columns:1fr 220px;gap:30px}
+  .tools h2{margin-bottom:20px}
+  .tools a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;font-size:13px;text-decoration:none;border-top:1px solid var(--line-soft);transition:padding .3s var(--ease),color .3s}
+  .tools a:hover{padding-left:6px;color:var(--gain)}
+  .tools a svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+  .tools a:hover svg{transform:translateX(4px)}
+  .tools a[aria-disabled=true]{pointer-events:none;color:var(--ink-mute)}
+  .tools a small{font-size:10px;border:1px solid var(--line-soft);border-radius:99px;padding:2px 7px}
+  .timeline{position:relative;height:330px;margin:50px 0 0 99px}
+  .timeline svg.axis{position:absolute;left:0;right:0;top:143px;width:100%;height:16px;overflow:visible}
+  .timeline .seg{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s var(--ease) forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .cycle{position:absolute;width:31%;opacity:0;animation:rise .7s var(--ease) forwards}
+  .cycle h3{margin:0;font:400 16px/1.35 var(--body)}
+  .cycle p{margin:6px 0 10px;font-size:13px}
+  .cycle .stage3d{width:75px;height:75px;font-size:9px}
+  .cycle.down{top:174px}
+  .mticks{position:absolute;left:0;right:0;top:162px;display:flex;justify-content:space-between;font-size:10px;color:var(--ink-mute)}
+  .year-total{display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap}
+  .year-total svg{width:24px;height:24px}
+  .empty{color:var(--ink-mute);font-size:13px;margin-top:30px}
+
+  /* alerts + soil moisture */
+  .alerts{grid-column:1}
+  .soilm{grid-column:2/4}
+  .alist{list-style:none;margin:0;padding:0}
+  .alist li{display:grid;grid-template-columns:28px 1fr auto;gap:2px 12px;align-items:start;padding:11px 0;border-top:1px solid var(--line-soft);font-size:13px;opacity:0;animation:rise .5s var(--ease) forwards;animation-delay:calc(var(--i,0) * 60ms)}
+  .alist li.muted,.alist li.ok{display:block;opacity:1;animation:none}
+  .alist .ic{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;background:rgba(224,120,86,.15)}
+  .alist .ic.w{background:rgba(126,179,255,.15)}
+  .alist .t a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line-soft)}
+  .alist .t small{display:block;color:var(--ink-mute);font-size:11px;margin-top:2px}
+  .alist .d{font-size:12px;color:var(--ink-dim);white-space:nowrap}
+  .sm-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .sm-now b{font:400 28px/1 var(--display);margin-right:10px;font-variant-numeric:tabular-nums}
+  .sm-now span{font-size:13px}
+  .sm-chart{display:block;width:100%;height:170px;margin-top:14px;overflow:visible}
+  .sm-chart text{font:10px Inter,sans-serif;fill:#9b9892}
+  .sm-chart .ln{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s var(--ease) .3s forwards}
+  @media (max-width:1400px){
+    .alerts{grid-column:1}.soilm{grid-column:2}
+    .dash{grid-template-columns:1fr 1fr}
+    .est{grid-column:1/3}.now{grid-column:1}.year{grid-column:2;grid-template-columns:1fr}
+    .l,.m,.r,.year{border-radius:var(--r)}
+  }
+  @media (max-width:900px){
+    .dash{grid-template-columns:1fr}
+    .est,.now,.year,.alerts,.soilm{grid-column:1}
+    .charts,.est-rows{grid-template-columns:1fr}
+    .timeline{margin-left:0}
+    .pick{grid-template-columns:19px 1fr}.pick .stage3d{grid-column:2}
+    .pick>div:last-child{grid-column:2}
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dash.html">terra<span class="dot">.</span>pura</a>
+  <nav class="topnav fade"><a href="satellite.html">Satellite</a><a href="simulate.html">Simulate</a><a href="solar.html">Solar</a><a href="market.html">Market</a><a href="market.html#refinery">Refinery</a><a href="report.html">Costs</a><a href="settings.html">Settings</a></nav>
+</header>
+
+<main class="dash">
+  <section class="panel land l" style="--i:0">
+    <h2>Your land: <b id="coords">—</b></h2>
+    <div class="place" id="place"></div>
+    <div class="mapwrap"><div id="miniMap" aria-label="Map of your land"></div><div class="mapbtns"><button id="mapSat" aria-pressed="false">Satellite</button><a href="satellite.html">Crop health from orbit →</a></div></div>
+  </section>
+
+  <section class="panel costs m" style="--i:1">
+    <h2>Costs (Estimated)<small id="costFor">per crop rotation</small></h2>
+    <div class="crows" id="costRows"></div>
+    <p class="row co2">Emissions <b id="cCo2">—</b></p>
+    <p class="clinks"><a href="report.html" id="reportLink">Full cost report &amp; assumptions →</a></p>
+    <div class="total">
+      <h3>Estimated total cost per crop rotation:</h3>
+      <div class="big" id="cTotal">—</div>
+    </div>
+  </section>
+
+  <section class="panel est r" id="estimates" style="--i:2">
+    <div class="est-head">
+      <h2 style="margin:0">Our estimates</h2>
+      <button id="editBtn" aria-pressed="false" title="Edit the predicted values" aria-label="Edit the predicted values"></button>
+      <button class="reset" id="reset" hidden>Reset to predicted</button>
+    </div>
+    <div class="est-rows" id="estRows"></div>
+    <div class="charts">
+      <figure class="chart">
+        <figcaption><span>Rainfall<br><small>mm per month · typical year</small></span><span style="text-align:right"><b id="rainTotal">—</b><br><small>mm / year</small></span></figcaption>
+        <div class="plot" id="precip"></div>
+      </figure>
+      <figure class="chart">
+        <figcaption><span>Temperature<br><small>°C · monthly average, shaded = night low to day high</small></span><span style="text-align:right"><b id="tempAvg">—</b><br><small>yearly avg</small></span></figcaption>
+        <div class="plot" id="temp"></div>
+      </figure>
+    </div>
+    <p class="sources" id="sources"></p>
+  </section>
+
+  <section class="panel now l" style="--i:3">
+    <h2>What's best to grow now</h2>
+    <div class="pick" id="pick"></div>
+    <ul class="list" id="list"></ul>
+  </section>
+
+  <section class="panel year" style="--i:4">
+    <div>
+      <h2>What's best to grow year-round</h2>
+      <div class="timeline" id="timeline"></div>
+      <div class="year-total" id="yearTotal"></div>
+    </div>
+    <nav class="tools" aria-label="Other tools">
+      <h2>Other tools</h2>
+      <a href="simulate.html">Simulate plant growth <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a href="pricing.html">Local area pricing index <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a href="market.html">Market, contracts &amp; processing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a href="solar.html">Solar panel planner <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a href="settings.html">Change providers, machinery &amp; storage <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a href="years.html" aria-disabled="true">What's best to grow over the years <small>soon</small></a>
+    </nav>
+  </section>
+
+  <section class="panel alerts l" style="--i:5">
+    <h2>Alerts near your land</h2>
+    <ul class="alist" id="alerts"><li class="muted">Checking NASA EONET and the forecast…</li></ul>
+    <p class="sources">Natural hazards: NASA EONET (open events, 300 km) · Weather: Open-Meteo forecast</p>
+  </section>
+
+  <section class="panel soilm r" style="--i:6">
+    <div class="sm-head">
+      <h2 style="margin:0">Soil moisture</h2>
+      <div class="sm-now"><b id="smNow">—</b><span id="smVs" class="muted"></span></div>
+    </div>
+    <p class="muted" style="font-size:12px;margin:6px 0 0">Root-zone wetness over the last 90 days (0% = bone dry, 100% = saturated). Dashed line: normal for the time of year.</p>
+    <svg id="smChart" class="sm-chart" role="img" aria-label="Soil moisture over the last 90 days"></svg>
+    <p class="sources" id="smSrc">NASA POWER daily soil wetness (MERRA-2)</p>
+  </section>
+</main>
+
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script type="module" src="assets/js/dash.js"></script>
+<footer class="si-note"><span>Code generated with Super Intelligence (SI): Claude by Anthropic, from the terra.pura team's designs.</span> <span>Data: NASA POWER · SoilGrids · Open-Meteo · OpenStreetMap · FAOSTAT.</span> <a href="about.html">About &amp; disclosure</a> <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>

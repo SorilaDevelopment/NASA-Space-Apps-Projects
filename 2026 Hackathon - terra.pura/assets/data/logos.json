@@ -1,0 +1,1834 @@
+{
+"A2A Energia": {
+"wikidata": "Q113465236",
+"logo": "assets/img/logos/a2a-energia-icon.png",
+"kind": "icon",
+"website": "http://www.a2aenergia.eu"
+},
+"Affinity Water": {
+"wikidata": "Q4688977",
+"logo": "assets/img/logos/affinity-water-icon.png",
+"kind": "icon",
+"website": "http://www.affinitywater.co.uk"
+},
+"Aigües de Barcelona": {
+"wikidata": "Q5660318",
+"logo": "assets/img/logos/aiges-de-barcelona.png",
+"kind": "logo",
+"website": "https://www.aiguesdebarcelona.cat"
+},
+"Alectra Utilities": {
+"wikidata": "Q28971907",
+"logo": "assets/img/logos/alectra-utilities-icon.png",
+"kind": "icon",
+"website": "http://www.alectrautilities.com"
+},
+"Alexela": {
+"wikidata": "Q4721301",
+"logo": "assets/img/logos/alexela-icon.png",
+"kind": "icon",
+"website": "http://www.alexela.ee/"
+},
+"Alinta Energy": {
+"wikidata": "Q4726783",
+"logo": "assets/img/logos/alinta-energy-icon.png",
+"kind": "icon",
+"website": "https://www.alintaenergy.com.au"
+},
+"Amisragas": {
+"wikidata": "Q86007191",
+"logo": "assets/img/logos/amisragas-icon.png",
+"kind": "icon",
+"website": "https://www.amisragas.co.il/"
+},
+"Andel Energi": {
+"wikidata": "Q12334259",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Anglian Water": {
+"wikidata": "Q4763422",
+"logo": null,
+"kind": null,
+"website": "https://www.anglianwater.co.uk"
+},
+"BREB": {
+"logo": null,
+"blocked": true,
+"reason": "Wikidata matched a different organisation"
+},
+"BSES Yamuna": {
+"wikidata": "Q65064092",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Bolt": {
+"logo": null,
+"blocked": true,
+"reason": "Wikidata matched a different organisation"
+},
+"Bord Gáis Energy": {
+"wikidata": "Q23038143",
+"logo": "assets/img/logos/bord-gis-energy-icon.png",
+"kind": "icon",
+"website": "https://www.bordgaisenergy.ie/"
+},
+"Brabant Water": {
+"wikidata": "Q2458134",
+"logo": "assets/img/logos/brabant-water.png",
+"kind": "logo",
+"website": "https://www.brabantwater.nl"
+},
+"Bristol Water": {
+"wikidata": "Q4969074",
+"logo": "assets/img/logos/bristol-water-icon.png",
+"kind": "icon",
+"website": "https://www.bristolwater.co.uk/"
+},
+"CK Enerji": {
+"wikidata": "Q127599441",
+"logo": null,
+"kind": null,
+"website": "https://www.ckbogazici.com.tr/"
+},
+"Cambridge Water": {
+"wikidata": "Q5025619",
+"logo": null,
+"kind": null,
+"website": "https://www.cambridge-water.co.uk/"
+},
+"Canal de Isabel II": {
+"wikidata": "Q2407104",
+"logo": null,
+"kind": null,
+"website": "https://www.cyii.es/"
+},
+"Celesc": {
+"wikidata": "Q638533",
+"logo": "assets/img/logos/celesc.png",
+"kind": "logo",
+"website": "https://www.celesc.com.br"
+},
+"Celsia": {
+"wikidata": "Q113303365",
+"logo": "assets/img/logos/celsia-icon.png",
+"kind": "icon",
+"website": "https://www.celsia.com"
+},
+"Centropol": {
+"wikidata": "Q16765191",
+"logo": "assets/img/logos/centropol.png",
+"kind": "logo",
+"website": "https://www.centropol.cz/"
+},
+"Ceylon Electricity Board": {
+"wikidata": "Q5065789",
+"logo": "assets/img/logos/ceylon-electricity-board-icon.png",
+"kind": "icon",
+"website": "http://www.ceb.lk/"
+},
+"Contact Energy": {
+"wikidata": "Q1128439",
+"logo": "assets/img/logos/contact-energy-icon.png",
+"kind": "icon",
+"website": "http://www.contactenergy.co.nz/"
+},
+"Copasa": {
+"wikidata": "Q9831814",
+"logo": "assets/img/logos/copasa.png",
+"kind": "logo",
+"website": "http://www.copasa.com.br/"
+},
+"Copel": {
+"wikidata": "Q1130970",
+"logo": "assets/img/logos/copel.png",
+"kind": "logo",
+"website": "https://www.copel.com/"
+},
+"DESCO": {
+"logo": null,
+"blocked": true,
+"reason": "Wikidata matched a different organisation"
+},
+"DEWA": {
+"logo": "assets/img/logos/dewa-icon.png",
+"kind": "icon",
+"website": "https://dewa.gov.ae"
+},
+"DGVCL": {
+"wikidata": "Q5210081",
+"logo": null,
+"kind": null,
+"website": "https://www.dgvcl.com"
+},
+"DHBVN": {
+"wikidata": "Q5210080",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Davao Light": {
+"wikidata": "Q5228152",
+"logo": "assets/img/logos/davao-light-icon.png",
+"kind": "icon",
+"website": "https://davaolight.com"
+},
+"Direct Energy": {
+"wikidata": "Q113030705",
+"logo": null,
+"kind": null,
+"website": "https://www.zfpenergy.cz"
+},
+"E.ON Energie România": {
+"wikidata": "Q108169284",
+"logo": "assets/img/logos/e-on-energie-romnia.png",
+"kind": "logo",
+"website": "http://www.eon.ro"
+},
+"ECG": {
+"wikidata": "Q79785",
+"logo": null,
+"kind": null,
+"website": null
+},
+"EDF": {
+"wikidata": "Q274591",
+"logo": "assets/img/logos/edf.png",
+"kind": "logo",
+"website": "https://www.edf.fr/"
+},
+"EDP Comercial": {
+"wikidata": "Q113466454",
+"logo": "assets/img/logos/edp-comercial-icon.png",
+"kind": "icon",
+"website": "http://www.edp.pt"
+},
+"EDP São Paulo": {
+"wikidata": "Q10269426",
+"logo": null,
+"kind": null,
+"website": "https://www.edp.com.br"
+},
+"EPM": {
+"wikidata": "Q3053381",
+"logo": "assets/img/logos/epm.png",
+"kind": "logo",
+"website": "http://www.epm.com.co"
+},
+"EVN": {
+"wikidata": "Q872140",
+"logo": "assets/img/logos/evn.png",
+"kind": "logo",
+"website": "https://www.evn.at"
+},
+"EVN Bulgaria": {
+"wikidata": "Q139997536",
+"logo": null,
+"kind": null,
+"website": null
+},
+"EWE": {
+"wikidata": "Q1276459",
+"logo": "assets/img/logos/ewe.png",
+"kind": "logo",
+"website": "https://www.ewe.com/"
+},
+"EWII": {
+"wikidata": "Q113466076",
+"logo": "assets/img/logos/ewii-icon.png",
+"kind": "icon",
+"website": "https://www.ewii.dk/"
+},
+"Edenor": {
+"wikidata": "Q2843192",
+"logo": "assets/img/logos/edenor.png",
+"kind": "logo",
+"website": "https://www.edenor.com/"
+},
+"Edesur": {
+"wikidata": "Q5337059",
+"logo": "assets/img/logos/edesur.png",
+"kind": "logo",
+"website": "https://www.edesur.com.ar/"
+},
+"Electric Kiwi": {
+"wikidata": "Q28182584",
+"logo": "assets/img/logos/electric-kiwi-icon.png",
+"kind": "icon",
+"website": "http://www.electrickiwi.co.nz/"
+},
+"Electrica Furnizare": {
+"wikidata": "Q108169276",
+"logo": "assets/img/logos/electrica-furnizare-icon.png",
+"kind": "icon",
+"website": "https://www.electricafurnizare.ro/"
+},
+"Electricity Authority of Cyprus": {
+"wikidata": "Q5357793",
+"logo": null,
+"kind": null,
+"website": "https://www.eac.com.cy/"
+},
+"Elektro energija": {
+"wikidata": "Q113466506",
+"logo": null,
+"kind": null,
+"website": "http://www.elektro-energija.si/"
+},
+"Elektrum": {
+"wikidata": "Q16411263",
+"logo": "assets/img/logos/elektrum-icon.png",
+"kind": "icon",
+"website": "https://www.elektrum.ee"
+},
+"Elenger": {
+"wikidata": "Q2077935",
+"logo": "assets/img/logos/elenger.png",
+"kind": "logo",
+"website": "https://elenger.ee/"
+},
+"Elpedison": {
+"wikidata": "Q28026003",
+"logo": "assets/img/logos/elpedison-icon.png",
+"kind": "icon",
+"website": "http://www.elpedison.gr/"
+},
+"EnBW": {
+"wikidata": "Q644304",
+"logo": "assets/img/logos/enbw.png",
+"kind": "logo",
+"website": "https://www.enbw.com"
+},
+"Enel Distribución": {
+"wikidata": "Q5779688",
+"logo": "assets/img/logos/enel-distribucin.png",
+"kind": "logo",
+"website": "https://www.enel.cl/"
+},
+"Enel Energia": {
+"wikidata": "Q3725216",
+"logo": "assets/img/logos/enel-energia.png",
+"kind": "logo",
+"website": "https://www.enelenergia.it/"
+},
+"Enel Energie": {
+"logo": null,
+"blocked": true,
+"reason": "Wikidata matched a different organisation"
+},
+"Enel Perú": {
+"wikidata": "Q72718459",
+"logo": null,
+"kind": null,
+"website": "https://www.enel.pe/"
+},
+"Enemalta": {
+"wikidata": "Q1341101",
+"logo": "assets/img/logos/enemalta-icon.png",
+"kind": "icon",
+"website": "https://www.enemalta.com.mt/"
+},
+"Energa": {
+"wikidata": "Q9253957",
+"logo": "assets/img/logos/energa-icon.png",
+"kind": "icon",
+"website": "https://www.energa.pl/"
+},
+"EnergyAustralia": {
+"wikidata": "Q5376877",
+"logo": null,
+"kind": null,
+"website": "http://www.energy.com.au/"
+},
+"Engie": {
+"wikidata": "Q13416787",
+"logo": "assets/img/logos/engie.png",
+"kind": "logo",
+"website": "https://www.engie.com"
+},
+"Eni Plenitude": {
+"wikidata": "Q96240525",
+"logo": "assets/img/logos/eni-plenitude-icon.png",
+"kind": "icon",
+"website": "https://www.enigaseluce.com/"
+},
+"Enovos": {
+"wikidata": "Q16763485",
+"logo": "assets/img/logos/enovos-icon.png",
+"kind": "icon",
+"website": "https://www.enovos.lu/"
+},
+"Eskom": {
+"wikidata": "Q1367885",
+"logo": "assets/img/logos/eskom.png",
+"kind": "logo",
+"website": "https://www.eskom.co.za"
+},
+"Essent": {
+"wikidata": "Q170885",
+"logo": null,
+"kind": null,
+"website": null
+},
+"FortisBC": {
+"wikidata": "Q5472663",
+"logo": "assets/img/logos/fortisbc-icon.png",
+"kind": "icon",
+"website": "https://www.fortisbc.com"
+},
+"Fortum": {
+"wikidata": "Q1439075",
+"logo": "assets/img/logos/fortum.png",
+"kind": "logo",
+"website": "https://www.fortum.com/"
+},
+"GEPCO": {
+"logo": null,
+"blocked": true,
+"reason": "Wikidata matched a different organisation"
+},
+"Galp": {
+"wikidata": "Q1492739",
+"logo": "assets/img/logos/galp.png",
+"kind": "logo",
+"website": "https://www.galp.com/"
+},
+"Genesis Energy": {
+"wikidata": "Q5532825",
+"logo": "assets/img/logos/genesis-energy.png",
+"kind": "logo",
+"website": "http://www.genesisenergy.co.nz/"
+},
+"HS Orka": {
+"wikidata": "Q16426472",
+"logo": "assets/img/logos/hs-orka-icon.png",
+"kind": "icon",
+"website": "https://www.hsorka.is/en/"
+},
+"Helen": {
+"wikidata": "Q3129981",
+"logo": "assets/img/logos/helen-icon.png",
+"kind": "icon",
+"website": "http://www.helen.fi/"
+},
+"Heron": {
+"logo": null,
+"blocked": true,
+"reason": "Wikidata matched a different organisation"
+},
+"Hidroelectrica": {
+"wikidata": "Q5752917",
+"logo": "assets/img/logos/hidroelectrica.png",
+"kind": "logo",
+"website": "https://www.hidroelectrica.ro"
+},
+"Hokkaido Electric": {
+"wikidata": "Q742449",
+"logo": "assets/img/logos/hokkaido-electric.png",
+"kind": "logo",
+"website": "http://www.hepco.co.jp"
+},
+"Hokuriku Electric": {
+"wikidata": "Q140908209",
+"logo": null,
+"kind": null,
+"website": "https://www.hokurikudenki.co.jp"
+},
+"Iberdrola": {
+"wikidata": "Q1437502",
+"logo": "assets/img/logos/iberdrola.png",
+"kind": "logo",
+"website": "https://www.iberdrola.com"
+},
+"Ignitis": {
+"wikidata": "Q583822",
+"logo": "assets/img/logos/ignitis-icon.png",
+"kind": "icon",
+"website": "https://ignitisgrupe.lt/"
+},
+"Ikeja Electric": {
+"wikidata": "Q28194789",
+"logo": "assets/img/logos/ikeja-electric-icon.png",
+"kind": "icon",
+"website": "https://www.ikejaelectric.com/"
+},
+"Innogy Energie": {
+"wikidata": "Q28920259",
+"logo": "assets/img/logos/innogy-energie-icon.png",
+"kind": "icon",
+"website": "https://www.innogy.cz/"
+},
+"Iren": {
+"wikidata": "Q3801865",
+"logo": "assets/img/logos/iren.png",
+"kind": "logo",
+"website": "https://www.gruppoiren.it/"
+},
+"Israel Electric Corporation": {
+"wikidata": "Q2915481",
+"logo": "assets/img/logos/israel-electric-corporation-icon.png",
+"kind": "icon",
+"website": "https://www.iec.co.il/home"
+},
+"KEPCO": {
+"wikidata": "Q486737",
+"logo": "assets/img/logos/kepco.png",
+"kind": "logo",
+"website": "http://home.kepco.co.kr/kepco/EN/main.do"
+},
+"KSEB": {
+"wikidata": "Q6393422",
+"logo": "assets/img/logos/kseb.png",
+"kind": "logo",
+"website": "http://www.kseb.in/"
+},
+"Kaduna Electric": {
+"wikidata": "Q138096826",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Kansai Electric": {
+"wikidata": "Q1365015",
+"logo": "assets/img/logos/kansai-electric.png",
+"kind": "logo",
+"website": "https://www.kepco.co.jp/"
+},
+"Kelag": {
+"wikidata": "Q1453452",
+"logo": "assets/img/logos/kelag.png",
+"kind": "logo",
+"website": "https://www.kelag.at/"
+},
+"Kenya Power": {
+"wikidata": "Q6392687",
+"logo": "assets/img/logos/kenya-power-icon.png",
+"kind": "icon",
+"website": "http://www.kplc.co.ke"
+},
+"Kyushu Electric": {
+"wikidata": "Q694507",
+"logo": "assets/img/logos/kyushu-electric.png",
+"kind": "logo",
+"website": "https://www.kyuden.co.jp/"
+},
+"MEPCO": {
+"wikidata": "Q6934346",
+"logo": "assets/img/logos/mepco-icon.png",
+"kind": "icon",
+"website": "http://www.mepco.com.pk/"
+},
+"MGVCL": {
+"wikidata": "Q6727582",
+"logo": "assets/img/logos/mgvcl-icon.png",
+"kind": "icon",
+"website": "https://www.mgvcl.com"
+},
+"MVM Next": {
+"wikidata": "Q1162287",
+"logo": "assets/img/logos/mvm-next-icon.png",
+"kind": "icon",
+"website": "http://www.mvm.hu"
+},
+"Manitoba Hydro": {
+"wikidata": "Q3285979",
+"logo": "assets/img/logos/manitoba-hydro.png",
+"kind": "logo",
+"website": "http://www.hydro.mb.ca"
+},
+"Maritime Electric": {
+"wikidata": "Q3293748",
+"logo": null,
+"kind": null,
+"website": "https://www.maritimeelectric.com/"
+},
+"Mega": {
+"logo": null,
+"blocked": true,
+"reason": "Wikidata matched a different organisation"
+},
+"NB Power": {
+"wikidata": "Q749716",
+"logo": "assets/img/logos/nb-power.png",
+"kind": "logo",
+"website": "https://www.nbpower.com"
+},
+"NEDCo": {
+"wikidata": "Q16733950",
+"logo": "assets/img/logos/nedco-icon.png",
+"kind": "icon",
+"website": "http://www.nedcogh.com/"
+},
+"NESCO": {
+"wikidata": "Q106802973",
+"logo": null,
+"kind": null,
+"website": null
+},
+"NL Hydro": {
+"wikidata": "Q3339114",
+"logo": "assets/img/logos/nl-hydro-icon.png",
+"kind": "icon",
+"website": "http://www.nlh.nl.ca/"
+},
+"NRG": {
+"wikidata": "Q29814283",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Naturgy": {
+"wikidata": "Q474690",
+"logo": "assets/img/logos/naturgy.png",
+"kind": "logo",
+"website": "https://www.naturgy.com/"
+},
+"Neoenergia Coelba": {
+"wikidata": "Q9790126",
+"logo": "assets/img/logos/neoenergia-coelba.png",
+"kind": "logo",
+"website": "http://www.coelba.com.br"
+},
+"Neoenergia Elektro": {
+"wikidata": "Q10271671",
+"logo": null,
+"kind": null,
+"website": "http://www.elektro.com.br"
+},
+"Norlys": {
+"wikidata": "Q113466110",
+"logo": "assets/img/logos/norlys-icon.png",
+"kind": "icon",
+"website": "https://www.norlys.dk"
+},
+"Northern Ireland Water": {
+"wikidata": "Q7058537",
+"logo": null,
+"kind": null,
+"website": "https://www.niwater.com/"
+},
+"Northumbrian Water": {
+"wikidata": "Q7059853",
+"logo": "assets/img/logos/northumbrian-water-icon.png",
+"kind": "icon",
+"website": "https://www.nwl.co.uk/"
+},
+"Nova Scotia Power": {
+"wikidata": "Q3345333",
+"logo": "assets/img/logos/nova-scotia-power.png",
+"kind": "logo",
+"website": "http://www.nspower.ca/"
+},
+"OK": {
+"wikidata": "Q4330203",
+"logo": null,
+"kind": null,
+"website": null
+},
+"PGVCL": {
+"wikidata": "Q7141803",
+"logo": null,
+"kind": null,
+"website": "https://www.pgvcl.com"
+},
+"PLN": {
+"wikidata": "Q4201636",
+"logo": "assets/img/logos/pln.png",
+"kind": "logo",
+"website": "https://web.pln.co.id/"
+},
+"PPC": {
+"wikidata": "Q326345",
+"logo": "assets/img/logos/ppc.png",
+"kind": "logo",
+"website": "https://www.dei.gr/el"
+},
+"PPC Energie": {
+"wikidata": "Q85979542",
+"logo": "assets/img/logos/ppc-energie.png",
+"kind": "logo",
+"website": "https://www.ppcenergy.ro/"
+},
+"PSPCL": {
+"wikidata": "Q7260300",
+"logo": "assets/img/logos/pspcl.png",
+"kind": "logo",
+"website": "http://pspcl.in/"
+},
+"Portsmouth Water": {
+"wikidata": "Q7232504",
+"logo": "assets/img/logos/portsmouth-water-icon.png",
+"kind": "icon",
+"website": "http://www.portsmouthwater.co.uk/"
+},
+"Power and Water Corporation": {
+"wikidata": "Q7236467",
+"logo": "assets/img/logos/power-and-water-corporation.png",
+"kind": "logo",
+"website": "https://www.powerwater.com.au/"
+},
+"Pražská energetika": {
+"wikidata": "Q15870812",
+"logo": "assets/img/logos/prask-energetika.png",
+"kind": "logo",
+"website": "https://www.pre.cz/"
+},
+"Protergia": {
+"wikidata": "Q22952859",
+"logo": "assets/img/logos/protergia-icon.png",
+"kind": "icon",
+"website": "http://www.protergia.gr/"
+},
+"RGE": {
+"wikidata": "Q10361966",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Redal": {
+"wikidata": "Q20449600",
+"logo": null,
+"kind": null,
+"website": null
+},
+"SEWA": {
+"wikidata": "Q336191",
+"logo": null,
+"kind": null,
+"website": null
+},
+"SP Group": {
+"wikidata": "Q30291786",
+"logo": null,
+"kind": null,
+"website": "https://www.sp-group.com/"
+},
+"SSE": {
+"logo": null,
+"blocked": true,
+"reason": "Wikidata matched a different organisation"
+},
+"SSE Airtricity": {
+"wikidata": "Q409271",
+"logo": null,
+"kind": null,
+"website": "https://www.sseairtricity.com"
+},
+"SWDE": {
+"wikidata": "Q3488709",
+"logo": "assets/img/logos/swde.png",
+"kind": "logo",
+"website": "http://www.swde.be"
+},
+"Sabah Electricity": {
+"wikidata": "Q7420551",
+"logo": null,
+"kind": null,
+"website": "https://www.sesb.com.my"
+},
+"Sabesp": {
+"wikidata": "Q183184",
+"logo": "assets/img/logos/sabesp.png",
+"kind": "logo",
+"website": "http://www.sabesp.com.br/"
+},
+"Saesa": {
+"wikidata": "Q9078423",
+"logo": "assets/img/logos/saesa-icon.png",
+"kind": "icon",
+"website": "http://www.gruposaesa.cl/saesa/"
+},
+"Salzburg AG": {
+"wikidata": "Q2215905",
+"logo": "assets/img/logos/salzburg-ag.png",
+"kind": "logo",
+"website": "http://www.salzburg-ag.at"
+},
+"Sanepar": {
+"wikidata": "Q9831851",
+"logo": "assets/img/logos/sanepar.png",
+"kind": "logo",
+"website": null
+},
+"Senoko Energy": {
+"wikidata": "Q18027813",
+"logo": "assets/img/logos/senoko-energy-icon.png",
+"kind": "icon",
+"website": "http://www.senokoenergy.com/"
+},
+"Severn Trent Water": {
+"wikidata": "Q503077",
+"logo": "assets/img/logos/severn-trent-water.png",
+"kind": "logo",
+"website": "https://www.stwater.co.uk/"
+},
+"Shikoku Electric": {
+"wikidata": "Q388455",
+"logo": "assets/img/logos/shikoku-electric.png",
+"kind": "logo",
+"website": "https://www.yonden.co.jp/"
+},
+"Skellefteå Kraft": {
+"wikidata": "Q7534472",
+"logo": "assets/img/logos/skellefte-kraft-icon.png",
+"kind": "icon",
+"website": "http://www.skekraft.se/"
+},
+"Slovenské elektrárne": {
+"wikidata": "Q3559219",
+"logo": "assets/img/logos/slovensk-elektrrne.png",
+"kind": "logo",
+"website": "https://www.seas.sk/"
+},
+"South East Water": {
+"wikidata": "Q7567143",
+"logo": "assets/img/logos/south-east-water-icon.png",
+"kind": "icon",
+"website": "https://southeastwater.co.uk"
+},
+"South West Water": {
+"wikidata": "Q7568898",
+"logo": "assets/img/logos/south-west-water-icon.png",
+"kind": "icon",
+"website": "https://www.southwestwater.co.uk"
+},
+"Southern Water": {
+"wikidata": "Q7570621",
+"logo": null,
+"kind": null,
+"website": "https://www.southernwater.co.uk/"
+},
+"State Grid Corporation of China": {
+"wikidata": "Q209078",
+"logo": null,
+"kind": null,
+"website": "http://www.sgcc.com.cn/"
+},
+"TANESCO": {
+"wikidata": "Q4050564",
+"logo": "assets/img/logos/tanesco-icon.png",
+"kind": "icon",
+"website": "http://www.tanesco.co.tz/"
+},
+"TEPCO Energy Partner": {
+"wikidata": "Q21034940",
+"logo": "assets/img/logos/tepco-energy-partner.png",
+"kind": "logo",
+"website": "https://www.tepco.co.jp/ep/"
+},
+"TasWater": {
+"wikidata": "Q19879818",
+"logo": "assets/img/logos/taswater-icon.png",
+"kind": "icon",
+"website": "https://www.taswater.com.au"
+},
+"Tata Power": {
+"wikidata": "Q1814429",
+"logo": "assets/img/logos/tata-power.png",
+"kind": "logo",
+"website": "http://www.tatapower.com/"
+},
+"Tohoku Electric": {
+"wikidata": "Q592765",
+"logo": "assets/img/logos/tohoku-electric.png",
+"kind": "logo",
+"website": "http://www.tohoku-epco.co.jp"
+},
+"Toronto Hydro": {
+"wikidata": "Q7826411",
+"logo": null,
+"kind": null,
+"website": "http://www.torontohydro.com"
+},
+"Torrent Power": {
+"wikidata": "Q7827044",
+"logo": null,
+"kind": null,
+"website": "http://www.torrentpower.com/"
+},
+"TotalEnergies": {
+"wikidata": "Q154037",
+"logo": "assets/img/logos/totalenergies.png",
+"kind": "logo",
+"website": "https://www.total.com/"
+},
+"Tuas Power": {
+"wikidata": "Q17561307",
+"logo": null,
+"kind": null,
+"website": "http://www.tuaspower.com.sg"
+},
+"UEDCL": {
+"wikidata": "Q28232201",
+"logo": "assets/img/logos/uedcl-icon.png",
+"kind": "icon",
+"website": "http://www.uedcl.co.ug/"
+},
+"UGVCL": {
+"wikidata": "Q7903326",
+"logo": null,
+"kind": null,
+"website": "https://www.ugvcl.com"
+},
+"Uisce Éireann": {
+"wikidata": "Q18352148",
+"logo": "assets/img/logos/uisce-ireann.png",
+"kind": "logo",
+"website": "https://www.water.ie"
+},
+"Vattenfall": {
+"wikidata": "Q157675",
+"logo": "assets/img/logos/vattenfall.png",
+"kind": "logo",
+"website": "http://www.vattenfall.com/"
+},
+"Verbund": {
+"wikidata": "Q688816",
+"logo": "assets/img/logos/verbund.png",
+"kind": "logo",
+"website": "https://www.verbund.com"
+},
+"Visayan Electric": {
+"wikidata": "Q7935617",
+"logo": null,
+"kind": null,
+"website": "https://visayanelectric.com/"
+},
+"Vitens": {
+"wikidata": "Q1943963",
+"logo": "assets/img/logos/vitens.png",
+"kind": "logo",
+"website": "https://www.vitens.nl"
+},
+"Vivaqua": {
+"wikidata": "Q3561439",
+"logo": "assets/img/logos/vivaqua-icon.png",
+"kind": "icon",
+"website": "http://www.vivaqua.be"
+},
+"WML": {
+"wikidata": "Q27959418",
+"logo": null,
+"kind": null,
+"website": "https://www.wml.nl"
+},
+"Wien Energie": {
+"wikidata": "Q2568787",
+"logo": "assets/img/logos/wien-energie.png",
+"kind": "logo",
+"website": "https://www.wienenergie.at/"
+},
+"Yorkshire Water": {
+"wikidata": "Q8055763",
+"logo": "assets/img/logos/yorkshire-water-icon.png",
+"kind": "icon",
+"website": "https://www.yorkshirewater.com/"
+},
+"ZSE": {
+"wikidata": "Q246921",
+"logo": "assets/img/logos/zse.png",
+"kind": "logo",
+"website": "https://www.zse.sk"
+},
+"ČEZ Prodej": {
+"wikidata": "Q54974573",
+"logo": null,
+"kind": null,
+"website": "https://www.cez.cz/cs/o-spolecnosti/skupina-cez/spolecnosti-skupiny-cez-v-cr/cez-prodej.html"
+},
+"ASAT": {
+"wikidata": "Q5385916",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Acquedotto Pugliese": {
+"wikidata": "Q623214",
+"logo": "assets/img/logos/acquedotto-pugliese-icon.png",
+"kind": "icon",
+"website": "https://www.aqp.it/"
+},
+"Aguas Andinas": {
+"logo": "assets/img/logos/aguas-andinas-icon.png",
+"kind": "icon",
+"website": "https://aguasandinas.cl"
+},
+"Aguas Santafesinas": {
+"wikidata": "Q132025149",
+"logo": "assets/img/logos/aguas-santafesinas-icon.png",
+"kind": "icon",
+"website": "https://www.aguassantafesinas.com.ar"
+},
+"Beijing Drainage Group": {
+"wikidata": "Q52843316",
+"logo": null,
+"kind": null,
+"website": "http://www.bdc.cn/"
+},
+"Berliner Wasserbetriebe": {
+"wikidata": "Q821856",
+"logo": null,
+"kind": null,
+"website": "https://www.bwb.de/de/index.php"
+},
+"Brněnské vodárny a kanalizace": {
+"wikidata": "Q36878168",
+"logo": "assets/img/logos/brnnsk-vodrny-a-kanalizace-icon.png",
+"kind": "icon",
+"website": "http://www.bvk.cz/en/"
+},
+"Compesa": {
+"wikidata": "Q9830582",
+"logo": "assets/img/logos/compesa-icon.png",
+"kind": "icon",
+"website": "http://www.compesa.com.br"
+},
+"Corsan": {
+"wikidata": "Q9830599",
+"logo": "assets/img/logos/corsan.png",
+"kind": "logo",
+"website": "http://www.corsan.com.br"
+},
+"De Watergroep": {
+"wikidata": "Q2619987",
+"logo": "assets/img/logos/de-watergroep.png",
+"kind": "logo",
+"website": "https://www.dewatergroep.be/"
+},
+"Dhaka WASA": {
+"wikidata": "Q13058117",
+"logo": "assets/img/logos/dhaka-wasa.png",
+"kind": "logo",
+"website": "http://www.dwasa.org.bd/"
+},
+"Dubai Municipality": {
+"wikidata": "Q20011908",
+"logo": null,
+"kind": null,
+"website": "https://www.dm.gov.ae/"
+},
+"EMASESA": {
+"wikidata": "Q5831718",
+"logo": "assets/img/logos/emasesa-icon.png",
+"kind": "icon",
+"website": "https://www.emasesa.com"
+},
+"EYDAP": {
+"wikidata": "Q15088495",
+"logo": "assets/img/logos/eydap.png",
+"kind": "logo",
+"website": "https://www.eydap.gr/"
+},
+"Eau de Paris": {
+"wikidata": "Q3046689",
+"logo": "assets/img/logos/eau-de-paris-icon.png",
+"kind": "icon",
+"website": "http://www.eaudeparis.fr/"
+},
+"Essbio": {
+"wikidata": "Q101210380",
+"logo": "assets/img/logos/essbio-icon.png",
+"kind": "icon",
+"website": "http://www.essbio.cl/"
+},
+"Evides": {
+"wikidata": "Q2199007",
+"logo": "assets/img/logos/evides-icon.png",
+"kind": "icon",
+"website": "http://www.evides.nl"
+},
+"Fővárosi Csatornázási Művek": {
+"wikidata": "Q110625531",
+"logo": "assets/img/logos/fvrosi-csatornzsi-mvek-icon.png",
+"kind": "icon",
+"website": "http://www.fcsm.hu/"
+},
+"HOFOR": {
+"wikidata": "Q62464",
+"logo": null,
+"kind": null,
+"website": "http://www.hofors.se"
+},
+"HSY": {
+"wikidata": "Q10520595",
+"logo": null,
+"kind": null,
+"website": "https://www.hsy.fi/en/"
+},
+"Hamburg Wasser": {
+"wikidata": "Q1572943",
+"logo": null,
+"kind": null,
+"website": "https://www.hamburgwasser.de/"
+},
+"IRETI": {
+"wikidata": "Q137661508",
+"logo": null,
+"kind": null,
+"website": "https://ireti.it/"
+},
+"Icon Water": {
+"wikidata": "Q288778",
+"logo": null,
+"kind": null,
+"website": "https://www.iconwater.com.au/"
+},
+"Indah Water Konsortium": {
+"wikidata": "Q6015650",
+"logo": "assets/img/logos/indah-water-konsortium.png",
+"kind": "logo",
+"website": "https://www.iwk.com.my/"
+},
+"Kolkata Municipal Corporation": {
+"wikidata": "Q3350560",
+"logo": "assets/img/logos/kolkata-municipal-corporation.png",
+"kind": "logo",
+"website": "https://www.kmcgov.in"
+},
+"Lagos Water Corporation": {
+"wikidata": "Q28232366",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Mainova": {
+"wikidata": "Q1885661",
+"logo": "assets/img/logos/mainova.png",
+"kind": "logo",
+"website": "https://www.mainova.de/"
+},
+"Manila Water": {
+"wikidata": "Q6749714",
+"logo": "assets/img/logos/manila-water.png",
+"kind": "logo",
+"website": "https://www.manilawater.com"
+},
+"Maynilad": {
+"wikidata": "Q6797462",
+"logo": null,
+"kind": null,
+"website": "https://www.mayniladwater.com.ph"
+},
+"Mekorot": {
+"wikidata": "Q2915148",
+"logo": null,
+"kind": null,
+"website": "http://www.mekorot.co.il/"
+},
+"PWN": {
+"logo": "assets/img/logos/pwn-icon.png",
+"kind": "icon",
+"website": "https://pwn.nl"
+},
+"Pražské vodovody a kanalizace": {
+"wikidata": "Q41567597",
+"logo": null,
+"kind": null,
+"website": "https://www.pvk.cz/"
+},
+"Provincial Waterworks Authority": {
+"wikidata": "Q6680090",
+"logo": null,
+"kind": null,
+"website": "https://www.pwa.co.th/"
+},
+"SIAAP": {
+"wikidata": "Q767268",
+"logo": null,
+"kind": null,
+"website": "https://www.siaap.fr"
+},
+"SIAPA": {
+"wikidata": "Q114921066",
+"logo": null,
+"kind": null,
+"website": null
+},
+"SIG": {
+"logo": "assets/img/logos/sig-icon.png",
+"kind": "icon",
+"website": "https://sig-ge.ch"
+},
+"SMAT": {
+"wikidata": "Q3943724",
+"logo": "assets/img/logos/smat-icon.png",
+"kind": "icon",
+"website": "https://www.smatorino.it"
+},
+"Sedapal": {
+"wikidata": "Q20024824",
+"logo": "assets/img/logos/sedapal.png",
+"kind": "logo",
+"website": "http://www.sedapal.com.pe/"
+},
+"Suez Eau France": {
+"wikidata": "Q3269667",
+"logo": "assets/img/logos/suez-eau-france.png",
+"kind": "logo",
+"website": "https://www.suez.fr/"
+},
+"Sydney Water": {
+"wikidata": "Q14476248",
+"logo": "assets/img/logos/sydney-water-icon.png",
+"kind": "icon",
+"website": "http://www.sydneywater.com.au/"
+},
+"Toronto Water": {
+"wikidata": "Q7826563",
+"logo": "assets/img/logos/toronto-water-icon.png",
+"kind": "icon",
+"website": "https://www.toronto.ca/city-government/accountability-operations-customer-service/city-administration/staff-directory-divisions-and-customer-service/toronto-water/"
+},
+"Veolia Eau": {
+"wikidata": "Q682599",
+"logo": "assets/img/logos/veolia-eau.png",
+"kind": "logo",
+"website": "http://www.veoliawater.com"
+},
+"Veritas": {
+"wikidata": "Q25409223",
+"logo": "assets/img/logos/veritas.png",
+"kind": "logo",
+"website": "http://www.gruppoveritas.it/"
+},
+"Waternet": {
+"wikidata": "Q2137469",
+"logo": "assets/img/logos/waternet-icon.png",
+"kind": "icon",
+"website": "https://www.waternet.nl"
+},
+"Wellington Water": {
+"logo": "assets/img/logos/wellington-water-icon.png",
+"kind": "icon",
+"website": "https://wellingtonwater.co.nz"
+},
+"Wiener Wasser": {
+"wikidata": "Q262313",
+"logo": null,
+"kind": null,
+"website": null
+},
+"Wodociągi Miasta Krakowa": {
+"wikidata": "Q127641656",
+"logo": null,
+"kind": null,
+"website": "https://wodociagi.krakow.pl"
+},
+"Yarra Valley Water": {
+"wikidata": "Q8049513",
+"logo": "assets/img/logos/yarra-valley-water-icon.png",
+"kind": "icon",
+"website": "https://www.yvw.com.au/"
+},
+"Uisce Éireann (Irish Water)": {
+"wikidata": "Q18352148",
+"logo": "assets/img/logos/uisce-ireann-irish-water.png",
+"kind": "logo",
+"website": "https://www.water.ie"
+},
+"Régie des eaux de Montpellier Méditerranée": {
+"wikidata": "Q115579414",
+"logo": null,
+"kind": null,
+"website": null
+},
+"RheinEnergie": {
+"wikidata": "Q2147629",
+"logo": "assets/img/logos/rheinenergie.png",
+"kind": "logo",
+"website": "https://www.rheinenergie.com/"
+},
+"Stadtentwässerung Stuttgart": {
+"wikidata": "Q105296697",
+"logo": "assets/img/logos/stadtentwsserung-stuttgart.png",
+"kind": "logo",
+"website": "https://www.stuttgart-stadtentwaesserung.de/"
+},
+"SachsenEnergie": {
+"wikidata": "Q104758900",
+"logo": "assets/img/logos/sachsenenergie.png",
+"kind": "logo",
+"website": "https://www.sachsenenergie.de/"
+},
+"Stadtentwässerung Dresden": {
+"wikidata": "Q2327075",
+"logo": "assets/img/logos/stadtentwsserung-dresden.png",
+"kind": "logo",
+"website": "https://www.stadtentwaesserung-dresden.de"
+},
+"enercity": {
+"wikidata": "Q1669141",
+"logo": "assets/img/logos/enercity.png",
+"kind": "logo",
+"website": "https://www.enercity.de"
+},
+"Aqualia": {
+"logo": "assets/img/logos/aqualia-icon.png",
+"kind": "icon",
+"website": "https://aqualia.com"
+},
+"Gruppo CAP": {
+"wikidata": "Q112820790",
+"logo": "assets/img/logos/gruppo-cap-icon.png",
+"kind": "icon",
+"website": "https://www.gruppocap.it"
+},
+"GORI": {
+"blocked": true
+},
+"IRETI (Iren)": {
+"logo": "assets/img/logos/ireti-iren-icon.png",
+"kind": "icon",
+"website": "https://gruppoiren.it"
+},
+"AGERE": {
+"blocked": true
+},
+"WMD Drinkwater": {
+"wikidata": "Q63152976",
+"logo": "assets/img/logos/wmd-drinkwater-icon.png",
+"kind": "icon",
+"website": "https://www.wmd.nl"
+},
+"Waterbedrijf Groningen": {
+"wikidata": "Q2200078",
+"logo": "assets/img/logos/waterbedrijf-groningen-icon.png",
+"kind": "icon",
+"website": "https://www.waterbedrijfgroningen.nl"
+},
+"Dunea": {
+"wikidata": "Q2623164",
+"logo": "assets/img/logos/dunea-icon.png",
+"kind": "icon",
+"website": "https://www.dunea.nl/"
+},
+"Oasen": {
+"wikidata": "Q2594590",
+"logo": "assets/img/logos/oasen-icon.png",
+"kind": "icon",
+"website": "https://www.oasen.nl/"
+},
+"Aquafin": {
+"wikidata": "Q1826608",
+"logo": "assets/img/logos/aquafin-icon.png",
+"kind": "icon",
+"website": "https://www.aquafin.be/"
+},
+"Fővárosi Vízművek": {
+"wikidata": "Q118725712",
+"logo": null,
+"kind": null,
+"website": "https://www.vizmuvek.hu/"
+},
+"Apa Nova București": {
+"wikidata": "Q18537468",
+"logo": "assets/img/logos/apa-nova-bucureti.png",
+"kind": "logo",
+"website": "https://www.apanovabucuresti.ro/"
+},
+"EYATH": {
+"wikidata": "Q15919663",
+"logo": "assets/img/logos/eyath-icon.png",
+"kind": "icon",
+"website": "https://www.eyath.gr"
+},
+"Metro Vancouver": {
+"logo": "assets/img/logos/metro-vancouver-icon.png",
+"kind": "icon",
+"website": "https://metrovancouver.org"
+},
+"SA Water": {
+"wikidata": "Q7388895",
+"logo": "assets/img/logos/sa-water-icon.png",
+"kind": "icon",
+"website": "https://www.sawater.com.au/"
+},
+"Water Corporation": {
+"wikidata": "Q17058890",
+"logo": "assets/img/logos/water-corporation-icon.png",
+"kind": "icon",
+"website": "https://www.watercorporation.com.au/"
+},
+"Watercare": {
+"wikidata": "Q96414325",
+"logo": "assets/img/logos/watercare-icon.png",
+"kind": "icon",
+"website": "https://www.watercare.co.nz"
+},
+"City of Cape Town": {
+"wikidata": "Q1185115",
+"logo": "assets/img/logos/city-of-cape-town.png",
+"kind": "logo",
+"website": "https://www.capetown.gov.za/"
+},
+"Sofiyska Voda": {
+"wikidata": "Q133289514",
+"logo": "assets/img/logos/sofiyska-voda-icon.png",
+"kind": "icon",
+"website": "https://www.sofiyskavoda.bg"
+},
+"ViK Plovdiv": {
+"wikidata": "Q113588952",
+"logo": null,
+"kind": null,
+"website": "https://www.vik.bg/"
+},
+"Kauno vandenys": {
+"logo": "assets/img/logos/kauno-vandenys-icon.png",
+"kind": "icon",
+"website": "https://kaunovandenys.lt"
+},
+"Klaipėdos vanduo": {
+"wikidata": "Q12660826",
+"logo": null,
+"kind": null,
+"website": null
+},
+"INAPA": {
+"blocked": true
+},
+"Kahramaa": {
+"wikidata": "Q3191905",
+"logo": null,
+"kind": null,
+"website": "http://www.kahramaa.com.qa"
+},
+"SONEDE": {
+"wikidata": "Q3488504",
+"logo": "assets/img/logos/sonede-icon.png",
+"kind": "icon",
+"website": "https://www.sonede.com.tn/index.php?id=12&L=1"
+},
+"ONAS": {
+"wikidata": "Q3349645",
+"logo": null,
+"kind": null,
+"website": "http://www.onas.nat.tn/"
+},
+"Algérienne des Eaux": {
+"wikidata": "Q132169766",
+"logo": null,
+"kind": null,
+"website": "https://www.ade.dz/"
+},
+"ONA (Office National de l’Assainissement)": {
+"blocked": true
+},
+"National Water and Sewerage Corporation": {
+"wikidata": "Q6979352",
+"logo": null,
+"kind": null,
+"website": "http://www.nwsc.co.ug/"
+},
+"WASAC": {
+"logo": "assets/img/logos/wasac-icon.png",
+"kind": "icon",
+"website": "https://wasac.rw"
+},
+"Water Utilities Corporation": {
+"wikidata": "Q7973406",
+"logo": "assets/img/logos/water-utilities-corporation-icon.png",
+"kind": "icon",
+"website": "https://www.wuc.bw"
+},
+"NamWater": {
+"wikidata": "Q117673",
+"logo": "assets/img/logos/namwater-icon.png",
+"kind": "icon",
+"website": "http://www.namwater.com.na"
+},
+"City of Windhoek": {
+"wikidata": "Q2583564",
+"logo": null,
+"kind": null,
+"website": "http://www.windhoekcc.org.na/"
+},
+"Georgian Water and Power (GWP)": {
+"wikidata": "Q131340190",
+"logo": "assets/img/logos/georgian-water-and-power-gwp.png",
+"kind": "logo",
+"website": "https://www.gwp.ge/"
+},
+"Saur": {
+"logo": "assets/img/logos/saur-icon.png",
+"kind": "icon",
+"website": "https://saur.com"
+},
+"Eau du Grand Lyon": {
+"logo": "assets/img/logos/eau-du-grand-lyon-icon.png",
+"kind": "icon",
+"website": "https://eaudugrandlyon.com"
+},
+"Eau de Marseille Métropole": {
+"logo": "assets/img/logos/eau-de-marseille-mtropole-icon.png",
+"kind": "icon",
+"website": "https://eaudemarseille-metropole.fr"
+},
+"Eau de Toulouse Métropole": {
+"logo": "assets/img/logos/eau-de-toulouse-mtropole-icon.png",
+"kind": "icon",
+"website": "https://eaudetoulousemetropole.fr"
+},
+"Eurométropole de Strasbourg": {
+"logo": "assets/img/logos/euromtropole-de-strasbourg-icon.png",
+"kind": "icon",
+"website": "https://strasbourg.eu"
+},
+"Stadtwerke München (SWM)": {
+"logo": "assets/img/logos/stadtwerke-mnchen-swm-icon.png",
+"kind": "icon",
+"website": "https://swm.de"
+},
+"Netze BW Wasser": {
+"logo": "assets/img/logos/netze-bw-wasser-icon.png",
+"kind": "icon",
+"website": "https://netze-bw.de"
+},
+"swb": {
+"logo": "assets/img/logos/swb-icon.png",
+"kind": "icon",
+"website": "https://swb.de"
+},
+"hanseWasser": {
+"logo": "assets/img/logos/hansewasser-icon.png",
+"kind": "icon",
+"website": "https://hansewasser.de"
+},
+"Global Omnium (Aguas de Valencia)": {
+"logo": "assets/img/logos/global-omnium-aguas-de-valencia-icon.png",
+"kind": "icon",
+"website": "https://globalomnium.com"
+},
+"EMACSA": {
+"logo": "assets/img/logos/emacsa-icon.png",
+"kind": "icon",
+"website": "https://emacsa.es"
+},
+"Acea Ato 2": {
+"logo": "assets/img/logos/acea-ato-2-icon.png",
+"kind": "icon",
+"website": "https://acea.it"
+},
+"MM SpA": {
+"logo": "assets/img/logos/mm-spa-icon.png",
+"kind": "icon",
+"website": "https://mmspa.eu"
+},
+"Hera": {
+"logo": "assets/img/logos/hera-icon.png",
+"kind": "icon",
+"website": "https://gruppohera.it"
+},
+"Publiacqua": {
+"logo": "assets/img/logos/publiacqua-icon.png",
+"kind": "icon",
+"website": "https://publiacqua.it"
+},
+"Abbanoa": {
+"logo": "assets/img/logos/abbanoa-icon.png",
+"kind": "icon",
+"website": "https://abbanoa.it"
+},
+"Umbra Acque": {
+"logo": "assets/img/logos/umbra-acque-icon.png",
+"kind": "icon",
+"website": "https://umbraacque.com"
+},
+"CAFC": {
+"logo": "assets/img/logos/cafc-icon.png",
+"kind": "icon",
+"website": "https://cafcspa.com"
+},
+"AMAP Palermo": {
+"logo": "assets/img/logos/amap-palermo-icon.png",
+"kind": "icon",
+"website": "https://amapspa.it"
+},
+"Águas do Tejo Atlântico": {
+"logo": "assets/img/logos/guas-do-tejo-atlntico-icon.png",
+"kind": "icon",
+"website": "https://aguasdotejoatlantico.adp.pt"
+},
+"Águas e Energia do Porto": {
+"logo": "assets/img/logos/guas-e-energia-do-porto-icon.png",
+"kind": "icon",
+"website": "https://aguasdoporto.pt"
+},
+"Águas do Algarve": {
+"logo": "assets/img/logos/guas-do-algarve-icon.png",
+"kind": "icon",
+"website": "https://aguasdoalgarve.pt"
+},
+"Águas de Coimbra": {
+"logo": "assets/img/logos/guas-de-coimbra-icon.png",
+"kind": "icon",
+"website": "https://aguasdecoimbra.pt"
+},
+"SPGE": {
+"logo": "assets/img/logos/spge-icon.png",
+"kind": "icon",
+"website": "https://spge.be"
+},
+"Aquanet": {
+"logo": "assets/img/logos/aquanet-icon.png",
+"kind": "icon",
+"website": "https://aquanet.pl"
+},
+"Gdańskie Wody": {
+"logo": "assets/img/logos/gdaskie-wody-icon.png",
+"kind": "icon",
+"website": "https://gdanskiewody.pl"
+},
+"Compania de Apă Someș": {
+"logo": "assets/img/logos/compania-de-ap-some-icon.png",
+"kind": "icon",
+"website": "https://casomes.ro"
+},
+"ApaVital": {
+"logo": "assets/img/logos/apavital-icon.png",
+"kind": "icon",
+"website": "https://apavital.ro"
+},
+"Compania Apa Brașov": {
+"logo": "assets/img/logos/compania-apa-braov-icon.png",
+"kind": "icon",
+"website": "https://apabrasov.ro"
+},
+"Aquatim": {
+"logo": "assets/img/logos/aquatim-icon.png",
+"kind": "icon",
+"website": "https://aquatim.ro"
+},
+"RAJA Constanța": {
+"logo": "assets/img/logos/raja-constana-icon.png",
+"kind": "icon",
+"website": "https://rajac.ro"
+},
+"Compania de Apă Oltenia": {
+"logo": "assets/img/logos/compania-de-ap-oltenia-icon.png",
+"kind": "icon",
+"website": "https://apaoltenia.ro"
+},
+"Compania Aquaserv": {
+"logo": "assets/img/logos/compania-aquaserv-icon.png",
+"kind": "icon",
+"website": "https://aquaserv.ro"
+},
+"Compania de Apă Arad": {
+"logo": "assets/img/logos/compania-de-ap-arad-icon.png",
+"kind": "icon",
+"website": "https://caarad.ro"
+},
+"Compania de Apă Oradea": {
+"logo": "assets/img/logos/compania-de-ap-oradea-icon.png",
+"kind": "icon",
+"website": "https://apaoradea.ro"
+},
+"ACET Suceava": {
+"logo": "assets/img/logos/acet-suceava-icon.png",
+"kind": "icon",
+"website": "https://acetsv.ro"
+},
+"Aquabis": {
+"logo": "assets/img/logos/aquabis-icon.png",
+"kind": "icon",
+"website": "https://aquabis.ro"
+},
+"Compania de Utilități Publice Dunărea Brăila": {
+"logo": "assets/img/logos/compania-de-utiliti-publice-dunrea-brila-icon.png",
+"kind": "icon",
+"website": "https://cupdunarea.ro"
+},
+"Hidro Prahova": {
+"logo": "assets/img/logos/hidro-prahova-icon.png",
+"kind": "icon",
+"website": "https://hidroprahova.ro"
+},
+"Apavil": {
+"logo": "assets/img/logos/apavil-icon.png",
+"kind": "icon",
+"website": "https://apavil.ro"
+},
+"Aquacaraș": {
+"logo": "assets/img/logos/aquacara-icon.png",
+"kind": "icon",
+"website": "https://aquacaras.ro"
+},
+"Aquavaslui": {
+"logo": "assets/img/logos/aquavaslui-icon.png",
+"kind": "icon",
+"website": "https://aquavaslui.ro"
+},
+"Water Services Corporation": {
+"logo": "assets/img/logos/water-services-corporation-icon.png",
+"kind": "icon",
+"website": "https://wsc.com.mt"
+},
+"ASKİ": {
+"logo": "assets/img/logos/aski-icon.png",
+"kind": "icon",
+"website": "https://aski.gov.tr"
+},
+"İZSU": {
+"logo": "assets/img/logos/izsu-icon.png",
+"kind": "icon",
+"website": "https://izsu.gov.tr"
+},
+"BUSKİ": {
+"logo": "assets/img/logos/buski-icon.png",
+"kind": "icon",
+"website": "https://buski.gov.tr"
+},
+"EPCOR Water": {
+"logo": "assets/img/logos/epcor-water-icon.png",
+"kind": "icon",
+"website": "https://epcor.com"
+},
+"Casan": {
+"logo": "assets/img/logos/casan-icon.png",
+"kind": "icon",
+"website": "https://casan.com.br"
+},
+"Saneago": {
+"logo": "assets/img/logos/saneago-icon.png",
+"kind": "icon",
+"website": "https://saneago.com.br"
+},
+"Acueducto de Bogotá (EAAB)": {
+"logo": "assets/img/logos/acueducto-de-bogot-eaab-icon.png",
+"kind": "icon",
+"website": "https://acueducto.com.co"
+},
+"Urban Utilities": {
+"logo": "assets/img/logos/urban-utilities-icon.png",
+"kind": "icon",
+"website": "https://urbanutilities.com.au"
+},
+"Air Selangor": {
+"logo": "assets/img/logos/air-selangor-icon.png",
+"kind": "icon",
+"website": "https://airselangor.com"
+},
+"Metropolitan Waterworks Authority": {
+"logo": "assets/img/logos/metropolitan-waterworks-authority-icon.png",
+"kind": "icon",
+"website": "https://mwa.co.th"
+},
+"Nairobi City Water and Sewerage Company": {
+"logo": "assets/img/logos/nairobi-city-water-and-sewerage-company-icon.png",
+"kind": "icon",
+"website": "https://nairobiwater.co.ke"
+},
+"KIWASCO": {
+"logo": "assets/img/logos/kiwasco-icon.png",
+"kind": "icon",
+"website": "https://kiwasco.co.ke"
+},
+"NYEWASCO": {
+"logo": "assets/img/logos/nyewasco-icon.png",
+"kind": "icon",
+"website": "https://nyewasco.co.ke"
+},
+"DAWASA": {
+"logo": "assets/img/logos/dawasa-icon.png",
+"kind": "icon",
+"website": "https://dawasa.go.tz"
+},
+"Vodoopskrba i odvodnja Zagreb": {
+"logo": "assets/img/logos/vodoopskrba-i-odvodnja-zagreb-icon.png",
+"kind": "icon",
+"website": "https://vio.hr"
+},
+"Západoslovenská vodárenská spoločnosť": {
+"logo": "assets/img/logos/zpadoslovensk-vodrensk-spolonos-icon.png",
+"kind": "icon",
+"website": "https://zsvs.sk"
+},
+"Stredoslovenská vodárenská spoločnosť": {
+"logo": "assets/img/logos/stredoslovensk-vodrensk-spolonos-icon.png",
+"kind": "icon",
+"website": "https://stvs.sk"
+},
+"JKP Vodovod i kanalizacija Novi Sad": {
+"logo": "assets/img/logos/jkp-vodovod-i-kanalizacija-novi-sad-icon.png",
+"kind": "icon",
+"website": "https://vikns.rs"
+},
+"Kyivvodokanal": {
+"logo": "assets/img/logos/kyivvodokanal-icon.png",
+"kind": "icon",
+"website": "https://vodokanal.kiev.ua"
+},
+"Vilniaus vandenys": {
+"logo": "assets/img/logos/vilniaus-vandenys-icon.png",
+"kind": "icon",
+"website": "https://vv.lt"
+},
+"Tallinna Vesi": {
+"logo": "assets/img/logos/tallinna-vesi-icon.png",
+"kind": "icon",
+"website": "https://tallinnavesi.ee"
+},
+"AyA (Instituto Costarricense de Acueductos y Alcantarillados)": {
+"logo": "assets/img/logos/aya-instituto-costarricense-de-acueductos-y-alcantarillados-icon.png",
+"kind": "icon",
+"website": "https://aya.go.cr"
+},
+"ESSAP": {
+"logo": "assets/img/logos/essap-icon.png",
+"kind": "icon",
+"website": "https://essap.com.py"
+},
+"EPMAPS": {
+"logo": "assets/img/logos/epmaps-icon.png",
+"kind": "icon",
+"website": "https://aguaquito.gob.ec"
+},
+"SAGUAPAC": {
+"logo": "assets/img/logos/saguapac-icon.png",
+"kind": "icon",
+"website": "https://saguapac.com.bo"
+},
+"WASA (Water and Sewerage Authority)": {
+"logo": "assets/img/logos/wasa-water-and-sewerage-authority-icon.png",
+"kind": "icon",
+"website": "https://wasa.gov.tt"
+},
+"Ashghal": {
+"logo": "assets/img/logos/ashghal-icon.png",
+"kind": "icon",
+"website": "https://ashghal.gov.qa"
+},
+"Electricity and Water Authority": {
+"logo": "assets/img/logos/electricity-and-water-authority-icon.png",
+"kind": "icon",
+"website": "https://ewa.bh"
+},
+"SODECI": {
+"logo": "assets/img/logos/sodeci-icon.png",
+"kind": "icon",
+"website": "https://sodeci.ci"
+},
+"Camwater": {
+"logo": "assets/img/logos/camwater-icon.png",
+"kind": "icon",
+"website": "https://camwater.cm"
+},
+"National Water Supply and Drainage Board": {
+"logo": "assets/img/logos/national-water-supply-and-drainage-board-icon.png",
+"kind": "icon",
+"website": "https://waterboard.lk"
+},
+"Kathmandu Upatyaka Khanepani Limited": {
+"logo": "assets/img/logos/kathmandu-upatyaka-khanepani-limited-icon.png",
+"kind": "icon",
+"website": "https://kathmanduwater.org"
+},
+"Phnom Penh Water Supply Authority": {
+"logo": "assets/img/logos/phnom-penh-water-supply-authority-icon.png",
+"kind": "icon",
+"website": "https://ppwsa.com.kh"
+}
+}

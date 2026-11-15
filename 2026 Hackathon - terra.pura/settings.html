@@ -1,0 +1,103 @@
+<!doctype html>
+<!-- terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- shared metadata -->
+<meta name="description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta name="keywords" content="agriculture, farming, crop planning, NASA, Earth science, climate data, soil, education, NASA Space Apps Challenge">
+<meta name="author" content="terra.pura team">
+<meta name="generator" content="Super Intelligence (SI): Claude by Anthropic">
+<meta name="si-disclosure" content="Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.">
+<meta name="rating" content="general">
+<meta name="robots" content="noindex, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1f1f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="terra.pura">
+<meta property="og:title" content="terra.pura: changing how you see agriculture">
+<meta property="og:description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta property="og:url" content="https://terrapura.sorila.dev/settings.html">
+<meta property="og:image" content="https://terrapura.sorila.dev/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://terrapura.sorila.dev/settings.html">
+<!-- /shared metadata -->
+<title>Settings — terra.pura</title>
+<script>
+  try { const s = JSON.parse(localStorage.getItem('terrapura.v1')) || {}; if (!(s.onboardedAt && s.land && s.land.length >= 3)) location.replace('index.html'); } catch (e) { location.replace('index.html'); }
+</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  main{padding:38px var(--gutter) var(--gutter);max-width:1300px}
+  h1{margin:0 0 6px;font:400 clamp(30px,3vw,44px)/1.2 var(--display)}
+  .lede{margin:0 0 30px;color:var(--ink-dim);font-size:14px}
+  .back{font-size:13px;text-decoration:none;color:var(--ink-dim);display:inline-flex;gap:6px;align-items:center}
+  .back svg{width:16px;height:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:15px}
+  .set{display:flex;flex-direction:column;gap:10px;padding:24px 26px;border:1px solid var(--line);border-radius:var(--r);transition:transform .35s var(--ease),background .3s}
+  .set:hover{transform:translateY(-3px);background:rgba(255,255,255,.02)}
+  .set .k{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-dim)}
+  .set .k svg{width:22px;height:22px}
+  .set .v{font:400 22px/1.25 var(--display)}
+  .set .d{font-size:13px;color:var(--ink-mute);min-height:18px}
+  .set a.btn{margin-top:auto;height:44px;min-width:0;align-self:flex-start;font-size:14px}
+  .danger{margin-top:40px;display:flex;gap:12px;flex-wrap:wrap}
+  .danger .btn{height:44px;min-width:0;font-size:14px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dash.html">terra<span class="dot">.</span>pura</a>
+  <a class="back fade" href="dash.html"><span data-icon="back"></span>Dashboard</a>
+</header>
+<main>
+  <h1 data-words>Settings</h1>
+  <p class="lede rise" style="--d:300ms">Change anything you told us during onboarding. The dashboard updates as soon as you save.</p>
+  <div class="grid" id="grid" data-stagger="350"></div>
+  <div class="danger rise" style="--d:900ms">
+    <button class="btn ghost" id="refresh">Refresh live data</button>
+    <button class="btn ghost" id="wipe">Start over</button>
+  </div>
+</main>
+<script type="module">
+  import { initUI, icons, store } from './assets/js/ui.js';
+  import { fleetYear, machineById, storageById } from './assets/js/farm.js';
+  import { money, GRID_CO2 } from './assets/js/data.js';
+  import { labourFor } from './assets/js/labour.js';
+  import { openLabourEditor } from './assets/js/labour-editor.js';
+  const s = store.get(), cur = s.region?.currency || 'USD';
+  const area = a => a >= 1e6 ? (a / 1e6).toFixed(2) + ' km²' : a >= 1e4 ? (a / 1e4).toFixed(2) + ' ha' : Math.round(a).toLocaleString() + ' m²';
+  const prov = k => {
+    const p = s[k] || {}, unit = k === 'energy' ? 'kWh' : 'L';
+    const v = p.id ? p.name : p.own ? 'Own supply only' : 'Not set';
+    const d = [p.id ? `${money(p.price, cur, unit === 'L' ? 5 : 4)}/${unit}` : '', p.own ? `+ ${p.own.toLocaleString()} ${unit}/month of your own` : ''].filter(Boolean).join(' ');
+    return [v, d];
+  };
+  const fleet = s.fleet || [], fy = fleetYear(fleet, GRID_CO2[s.region?.cc] ?? 0.45);
+  const st = storageById[s.storage?.id] || storageById.none;
+  const cards = [
+    { icon: 'pin', k: 'Land', v: area(s.landUse?.growable ?? s.area), d: [s.region?.geo?.place, s.region?.geo?.country].filter(Boolean).join(', '), edit: 'land', ret: 'complete.html' },
+    { icon: 'plug', k: 'Energy provider', ...Object.fromEntries([['v', prov('energy')[0]], ['d', prov('energy')[1]]]), edit: 'energy' },
+    { icon: 'glass', k: 'Water provider', v: prov('water')[0], d: prov('water')[1], edit: 'water' },
+    { icon: 'toilet', k: 'Sewage provider', v: prov('sewage')[0], d: prov('sewage')[1], edit: 'sewage' },
+    { icon: 'pushpin', k: 'Machinery', v: fleet.length ? fleet.map(f => `${f.count}× ${machineById[f.id].name}`).join(', ') : 'None', d: fleet.length ? `${(fy.co2 / 1000).toFixed(1)} t CO₂e a year · ${Math.round(fy.diesel).toLocaleString()} L diesel` : 'No fuel emissions', edit: 'machinery' },
+    (() => { const L = labourFor(s, s.region?.cc, s.fx?.rates?.[cur] || 1); return { icon: 'edit', k: 'Staff & wages', v: L.staff.length ? `${L.staff.reduce((a, w) => a + w.count, 0)} staff · ${money(L.wageBill, cur, 0)} a year` : 'National averages', d: `${L.staffRate ? money(L.staffRate, cur) + '/h staff · ' : ''}${money(L.seasonalRate, cur)}/h seasonal help`, action: 'labour' }; })(),
+    { icon: 'edit', k: 'Harvest storage', v: st.name, d: st.id !== 'none' ? `${s.storage.months} months · ${money(s.storage.rate || 0, cur)} per tonne per month` : '', edit: 'storage' },
+  ];
+  document.getElementById('grid').innerHTML = cards.map(c => `
+    <section class="set"><span class="k">${icons[c.icon]}${c.k}</span><span class="v">${c.v}</span><span class="d">${c.d || ''}</span>
+    ${c.action ? `<button class="btn ghost" data-action="${c.action}" style="margin-top:auto;height:44px;min-width:0;align-self:flex-start;font-size:14px">Edit</button>` : `<a class="btn ghost" href="onboarding.html?edit=${c.edit}&return=${c.ret || 'settings.html'}">Change</a>`}</section>`).join('');
+  document.querySelector('[data-action=labour]').onclick = () => openLabourEditor({ onSave: () => location.reload() });
+  document.querySelectorAll('[data-icon]').forEach(el => (el.outerHTML = icons[el.dataset.icon]));
+  initUI();
+  document.getElementById('refresh').onclick = () => { store.set({ dataFor: null }); location.href = 'complete.html'; };
+  document.getElementById('wipe').onclick = () => { if (confirm('Delete everything you entered and start again?')) { try { localStorage.removeItem('terrapura.v1'); } catch {} location.href = 'index.html'; } };
+</script>
+<footer class="si-note"><span>Code generated with Super Intelligence (SI): Claude by Anthropic, from the terra.pura team's designs.</span> <span>Data: NASA POWER · SoilGrids · Open-Meteo · OpenStreetMap · FAOSTAT.</span> <a href="about.html">About &amp; disclosure</a> <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!doctype html>
+<!-- terra.pura · NASA Space Apps Challenge 2026. Code generated with Super Intelligence (SI): Claude by Anthropic; designed, reviewed and tested by the terra.pura team. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- shared metadata -->
+<meta name="description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta name="keywords" content="agriculture, farming, crop planning, NASA, Earth science, climate data, soil, education, NASA Space Apps Challenge">
+<meta name="author" content="terra.pura team">
+<meta name="generator" content="Super Intelligence (SI): Claude by Anthropic">
+<meta name="si-disclosure" content="Code generated with Super Intelligence (SI): Claude by Anthropic, a code-generation tool, working from the terra.pura team's own designs; reviewed and tested by the terra.pura team.">
+<meta name="rating" content="general">
+<meta name="robots" content="noindex, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1f1f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="terra.pura">
+<meta property="og:title" content="terra.pura: changing how you see agriculture">
+<meta property="og:description" content="terra.pura helps farmers decide what is worth growing on their land, using NASA POWER climate data, ISRIC SoilGrids soil data, Open-Meteo forecasts, OpenStreetMap and FAOSTAT crop prices. An educational NASA Space Apps Challenge 2026 project.">
+<meta property="og:url" content="https://terrapura.sorila.dev/market.html">
+<meta property="og:image" content="https://terrapura.sorila.dev/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://terrapura.sorila.dev/market.html">
+<!-- /shared metadata -->
+<title>Market &amp; processing — terra.pura</title>
+<script>
+  try { const s = JSON.parse(localStorage.getItem('terrapura.v1')) || {}; if (!(s.onboardedAt && s.land && s.land.length >= 3)) location.replace('index.html'); else if (s.dataFor !== s.center.join(',')) location.replace('complete.html'); } catch (e) { location.replace('index.html'); }
+</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  main{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:15px;padding:38px var(--gutter) var(--gutter);align-items:start}
+  .head{grid-column:1/-1}
+  h1{margin:0 0 6px;font:400 clamp(30px,3vw,44px)/1.2 var(--display)}
+  .lede{margin:0;color:var(--ink-dim);font-size:14px;max-width:780px;line-height:1.55}
+  .back{font-size:13px;text-decoration:none;color:var(--ink-dim);display:inline-flex;gap:6px;align-items:center}
+  .back svg{width:16px;height:16px}
+  .panel{opacity:0;animation:rise .8s var(--ease) forwards;animation-delay:calc(var(--i) * 90ms + 150ms)}
+  .panel h2{margin:0 0 4px}
+  .sub{font-size:12px;color:var(--ink-mute);margin:0 0 16px}
+  .chips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+  .chips button{height:32px;padding:0 12px;border-radius:99px;border:1px solid var(--line-soft);background:none;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:background .25s,border-color .25s,color .25s}
+  .chips button i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+  .chips button:hover{border-color:var(--ink)}
+  .chips button[aria-pressed=true]{background:var(--ink);color:var(--dark-ink);border-color:var(--ink)}
+  .chips small{font-size:10px;opacity:.7}
+
+  .ds{border-radius:var(--r) 0 0 0}
+  .flow{display:grid;gap:14px;margin-top:4px}
+  .flow .lab{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-dim);margin-bottom:6px}
+  .bar{display:flex;height:26px;border-radius:5px;overflow:hidden;background:rgba(255,255,255,.05)}
+  .bar span{display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--dark-ink);white-space:nowrap;overflow:hidden;transform-origin:left;animation:barin .9s var(--ease) both}
+  @keyframes barin{from{transform:scaleX(0)}}
+  .legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11px;color:var(--ink-mute);margin-top:8px}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+  .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 0}
+  .facts div{font-size:11px;color:var(--ink-mute)}
+  .facts b{display:block;font:400 20px/1.2 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+
+  .gauge{display:flex;align-items:center;gap:18px;margin:4px 0 14px}
+  .gauge svg{width:92px;height:92px;flex:none}
+  .gauge .pct{font:400 34px/1 var(--display);font-variant-numeric:tabular-nums}
+  .gauge .what{font-size:13px;color:var(--ink-dim);margin-top:4px}
+  .why{list-style:none;margin:0;padding:0;font-size:13px}
+  .why li{display:grid;grid-template-columns:18px 1fr;gap:8px;padding:7px 0;border-top:1px solid var(--line-soft);color:var(--ink-dim);line-height:1.45}
+  .why li b{font-weight:500;text-align:center}
+  .why .p b{color:var(--gain)}.why .m b{color:var(--cost)}.why .n b{color:var(--ink-mute)}
+  .sell{border-radius:0 var(--r) 0 0}
+  .contract{border-radius:0;grid-column:1/-1}
+  .cgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}
+  @media (max-width:900px){.cgrid{grid-template-columns:1fr}}
+  .toggles{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin:6px 0 16px}
+  .switch{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;cursor:pointer}
+  .switch input{appearance:none;-webkit-appearance:none;width:36px;height:20px;border-radius:99px;background:var(--line-soft);position:relative;cursor:pointer;flex:none;transition:background .25s}
+  .switch input::after{content:"";position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#fff;transition:transform .3s var(--ease-spring)}
+  .switch input:checked{background:var(--gain)}
+  .switch input:checked::after{transform:translateX(16px);background:var(--dark-ink)}
+  .chains{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;font-size:12px}
+  .chains span{padding:4px 10px;border:1px solid var(--line-soft);border-radius:99px;color:var(--ink-dim)}
+  .chains span b{font-weight:400;color:var(--ink)}
+
+  .proc{border-radius:0 0 var(--r) var(--r)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin:6px 0 14px}
+  label.f{display:grid;gap:5px;font-size:12px;color:var(--ink-dim)}
+  label.f input,label.f select{height:34px;border:1px solid var(--line-soft);border-radius:6px;background:var(--bg);color:var(--ink);padding:0 10px;font:inherit;font-size:13px}
+  .seg{display:inline-flex;border:1px solid var(--line-soft);border-radius:99px;padding:3px}
+  .seg button{height:28px;padding:0 12px;border:0;border-radius:99px;background:none;font-size:12px;cursor:pointer;color:var(--ink-dim)}
+  .seg button[aria-pressed=true]{background:rgba(255,255,255,.12);color:var(--ink)}
+  .kp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+  .kp div{font-size:11px;color:var(--ink-mute)}
+  .kp b{display:block;font:400 22px/1.2 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+  .prods{font-size:12px;margin:0 0 10px}
+  .prods .row{padding:6px 0;border-top:1px solid var(--line-soft);margin:0;align-items:center}
+  .prods input{width:100px;height:28px;border:1px solid var(--line-soft);border-radius:5px;background:none;padding:0 8px;font-size:12px;text-align:right}
+  #pchart{display:block;width:100%;height:200px;overflow:visible}
+  #pchart text{font:10px Inter,sans-serif;fill:#9b9892}
+  .warn{font-size:12px;color:#e0b456;margin:6px 0 0}
+  .jump{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px}
+  .jump a{color:var(--ink-dim);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .2s,border-color .2s}
+  .jump a:hover{color:var(--ink);border-color:var(--ink)}
+  .jump a.hot{color:var(--gain);border-color:var(--gain)}
+  html{scroll-behavior:smooth}
+  section[id]{scroll-margin-top:20px}
+  details.assume{margin-top:14px;font-size:12px;color:var(--ink-dim)}
+  details.assume summary{cursor:pointer;color:#e0b456;list-style:none;display:inline-flex;gap:6px;align-items:center}
+  details.assume summary::before{content:"▶";font-size:9px;transition:transform .25s}
+  details.assume[open] summary::before{transform:rotate(90deg)}
+  details.assume ul{margin:8px 0 0;padding-left:18px;line-height:1.55}
+  details.assume li{margin:3px 0}
+  .proc{grid-column:1/-1}
+  .phead{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;flex-wrap:wrap}
+  .phead>div:first-child{flex:1 1 420px}
+  .pcrops{display:flex;flex-wrap:wrap;gap:6px}
+  .pcrops button{height:30px;padding:0 12px;border-radius:99px;border:1px solid var(--line-soft);background:none;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+  .pcrops button i{width:7px;height:7px;border-radius:50%;background:var(--c)}
+  .pcrops button[aria-pressed=true]{background:var(--ink);color:var(--dark-ink);border-color:var(--ink)}
+  .pgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;margin-top:8px}
+  .pgrid h3{margin:0 0 8px;font:400 14px/1.3 var(--body)}
+  .rep{width:100%;border-collapse:collapse;font-size:12.5px}
+  .rep td{padding:7px 4px;border-top:1px solid var(--line-soft);vertical-align:top;font-variant-numeric:tabular-nums}
+  .rep td:last-child{text-align:right;white-space:nowrap}
+  .rep td small{display:block;color:var(--ink-mute);font-size:11px;margin-top:2px}
+  .rep tr.t td{border-top:1px solid var(--ink)}
+  .rep .g{color:var(--gain)}.rep .c{color:var(--cost)}
+  .labnote{font-size:11px;color:var(--ink-mute);margin-top:-2px}
+  .labnote button{background:none;border:0;padding:0;color:var(--gain);cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-size:11px}
+  @media (max-width:900px){.pgrid{grid-template-columns:1fr}}
+  .foot{grid-column:1/-1;font-size:12px;color:var(--ink-mute);line-height:1.6;margin:0}
+  @media (max-width:1100px){main{grid-template-columns:1fr}.ds,.sell,.contract,.proc{border-radius:var(--r)}}
+  @media (max-width:560px){.facts,.kp{grid-template-columns:1fr 1fr}.toggles,.row2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dash.html">terra<span class="dot">.</span>pura</a>
+  <a class="back fade" href="dash.html"><span data-icon="back"></span>Dashboard</a>
+</header>
+<main>
+  <div class="head">
+    <h1 data-words>Market &amp; processing</h1>
+    <p class="lede rise" style="--d:300ms" id="lede">How much of each crop your country grows, imports and uses — and what that means for selling yours.</p>
+  </div>
+  <nav class="jump rise" style="--d:350ms" aria-label="Sections"><a href="#ds">Demand &amp; supply</a><a href="#sell">How likely you are to sell</a><a href="#contract">Supermarket contract</a><a href="#refinery" class="hot">Refinery calculator</a><a href="report.html">Full cost report</a></nav>
+  <div class="chips rise" style="--d:400ms" id="chips" aria-label="Crop"></div>
+
+  <section class="panel ds" id="ds" style="--i:0">
+    <h2 id="dsTitle">Demand &amp; supply</h2>
+    <p class="sub" id="dsSub"></p>
+    <div class="flow" id="flow"></div>
+    <div class="facts" id="facts"></div>
+  </section>
+
+  <section class="panel sell" id="sell" style="--i:1">
+    <h2>How likely you are to sell it</h2>
+    <p class="sub" id="sellSub"></p>
+    <div class="gauge"><svg id="sellG" viewBox="0 0 92 92"></svg><div><div class="pct" id="sellPct">—</div><div class="what">chance of selling your whole harvest at a fair price</div></div></div>
+    <ul class="why" id="sellWhy"></ul>
+    <details class="assume"><summary>What this assumes</summary><ul>
+      <li>Starts from a neutral 72% and moves with the country's import dependence, self-sufficiency, how big your harvest is next to national production, and how perishable the crop is.</li>
+      <li>"Fair price" means close to the FAOSTAT farm-gate average; you can almost always sell at a low enough price.</li>
+      <li>National data (FAOSTAT Food Balance Sheets) — local markets, buyers' contracts and transport distance aren't modelled.</li>
+      <li>The weights are our own judgement, not a fitted statistical model.</li></ul></details>
+  </section>
+
+  <section class="panel contract" id="contract" style="--i:2">
+    <h2>Supermarket contract</h2>
+    <p class="sub">An estimate from your crop, volume and setup, and the chains trading near you. No public data on supermarket contracts exists, so treat it as a guide.</p>
+    <div class="cgrid"><div>
+    <div class="toggles">
+      <label class="switch">Food-safety certified (e.g. GLOBALG.A.P.)<input type="checkbox" data-t="certified"></label>
+      <label class="switch">Can wash, grade &amp; pack<input type="checkbox" data-t="packing"></label>
+      <label class="switch">Can supply year-round<input type="checkbox" data-t="yearRound"></label>
+      <label class="switch">Organic<input type="checkbox" data-t="organic"></label>
+    </div>
+    <div class="chains" id="chains"><span>Looking for supermarket chains within 30 km…</span></div>
+    </div><div>
+    <div class="gauge"><svg id="conG" viewBox="0 0 92 92"></svg><div><div class="pct" id="conPct">—</div><div class="what">chance of landing a supermarket supply contract</div></div></div>
+    <ul class="why" id="conWhy"></ul>
+    <details class="assume"><summary>What this assumes</summary><ul>
+      <li>Volume used is a year's supply: one harvest for grain, as many cycles as fit in a year for vegetables.</li>
+      <li>Starts at 25% for fresh produce and 4% for grain and pulses, then adds for volume, certification, packing, year-round supply, organic and nearby chains.</li>
+      <li>Nearby chains = supermarket brands with stores mapped on OpenStreetMap within 30 km; mapping is incomplete in some countries.</li>
+      <li>Capped at 70% (20% for grain and pulses) because buyers also weigh price, track record and relationships we can't see.</li>
+      <li>No public data on supermarket supply contracts exists, so the weights are our own judgement.</li></ul></details>
+    </div></div>
+  </section>
+
+  <section class="panel proc" id="refinery" style="--i:3">
+    <div class="phead"><div><h2>Refinery calculator: process it yourself?</h2>
+      <p class="sub" id="procSub"></p></div>
+      <div class="pcrops" id="procCrops" aria-label="Crop to process"></div></div>
+    <div id="procBody"></div>
+  </section>
+
+  <p class="foot">Sources: FAOSTAT Food Balance Sheets (production, imports, exports and uses, latest year per country) · World Bank Commodity Price Data ("Pink Sheet") for bulk oil and meal prices · FAOSTAT producer prices for raw crops · supermarket chains from OpenStreetMap. Flour prices are estimated from the grain price (bulk ×1.45, premium stone-ground ×4 the grain price) — edit them with real quotes. Equipment costs are typical small-scale figures.</p>
+</main>
+<script type="module" src="assets/js/market-page.js"></script>
+<footer class="si-note"><span>Code generated with Super Intelligence (SI): Claude by Anthropic, from the terra.pura team's designs.</span> <span>Data: NASA POWER · SoilGrids · Open-Meteo · OpenStreetMap · FAOSTAT.</span> <a href="about.html">About &amp; disclosure</a> <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>
