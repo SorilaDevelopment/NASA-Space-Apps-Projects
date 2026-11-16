@@ -1,6 +1,19 @@
 # NASA-Space-Apps-Projects
 SorilaDevelopment/NASA-Space-Apps-Projects is a repository created by Sorila Development, containing all our NASA Space Apps Challenge projects licensed under a AGPL 3.0 license, allowing you to use our projects on your own hardware and modify them to fit your needs.
 
+## Licence
+
+Our projects are **dual-licensed**. Pick whichever fits:
+
+| | **AGPL-3.0** | **SAFCL v1.0** (Sorila Attribution-Free Commercial License) |
+|---|---|---|
+| Cost | Free | From **£50**, or a fixed commission on sales. Negotiation encouraged |
+| Use it as it is, on your own hardware | ✅ | ✅ |
+| Edit it, or build it into a commercial product or service | ✅ if you release your source code under AGPL-3.0 | ✅ and keep your code private |
+| Credit Sorila Development | Required | Not required |
+
+The SAFCL price goes up with estimated revenue, company size and how successful the project is expected to be. To get one, email **[luca@sorila.dev](mailto:luca@sorila.dev)**. Full terms: [AGPL-3.0](LICENSE) · [SAFCL v1.0](2026%20Hackathon%20-%20terra.pura/LICENSE.md)
+
 # List of releases:
 2026 Hackathon:
 - [terra.pura](2026%20Hackathon%20-%20terra.pura) · use it online at https://terrapura.sorila.dev · read our mission in the [pitch deck](https://slides.sorila.dev/terrapura-pitch)
@@ -51,4 +64,4 @@ macOS / Linux, in Terminal:
 curl -fsSL 'https://raw.githubusercontent.com/SorilaDevelopment/NASA-Space-Apps-Projects/main/2026%20Hackathon%20-%20terra.pura/install.sh' | TP_MODE=remove bash
 ```
 
-More detail: [terra.pura README](2026%20Hackathon%20-%20terra.pura/README.md) · Licence: [AGPL-3.0](LICENSE) or commercial, see [LICENSE.md](2026%20Hackathon%20-%20terra.pura/LICENSE.md)
+More detail: [terra.pura README](2026%20Hackathon%20-%20terra.pura/README.md) · Licence: [AGPL-3.0](LICENSE) or [SAFCL v1.0](2026%20Hackathon%20-%20terra.pura/LICENSE.md)

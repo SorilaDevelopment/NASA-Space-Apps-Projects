@@ -72,7 +72,7 @@ Visitors' browsers call these directly; the server doesn't. If a school or offic
 - **VPN check:** the privacy page describes Sorila's VPN check, which applies across Sorila sites. Implementing it is the server's job; this code doesn't do it.
 - **Canonical URLs:** canonical links, `sitemap.xml` and `robots.txt` already point to `https://terrapura.sorila.dev/`.
 - **SI disclosure:** this is required by NASA Space Apps. It's in every page's metadata and footer, `about.html`, `README.md` and `LICENSE.md`; please keep it.
-- **Licence:** dual-licensed, AGPL-3.0 or commercial; see `LICENSE.md`.
+- **Licence:** dual-licensed, AGPL-3.0 or SAFCL v1.0 (commercial); see `LICENSE.md`.
 
 ## 2. The pitch deck: slides.sorila.dev/terrapura-pitch
 

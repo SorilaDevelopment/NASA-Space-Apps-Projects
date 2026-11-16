@@ -3,7 +3,7 @@
 terra.pura is **dual-licensed**. You can use it under either:
 
 1. **GNU Affero General Public License v3.0 (AGPL-3.0)**, free; or
-2. **a commercial licence** from Sorila Development, by arrangement.
+2. **the Sorila Attribution-Free Commercial License v1.0 (SAFCL v1.0)**, a commercial licence from Sorila Development, by arrangement.
 
 Copyright © 2026 Sorila Development. Built for the NASA Space Apps Challenge 2026.
 
@@ -17,9 +17,9 @@ In short, you can use, study, run and modify terra.pura, including on your own h
 
 Using terra.pura as it is, on your own computer or for your own farm, needs nothing more from you.
 
-## 2. Commercial licence
+## 2. SAFCL v1.0 (Sorila Attribution-Free Commercial License)
 
-You need a commercial licence if you want to **edit terra.pura or build it (or any part of it) into a product or service that you run commercially**, and you don't want to release your own source code under AGPL-3.0.
+You need a SAFCL licence if you want to **edit terra.pura or build it (or any part of it) into a product or service that you run commercially**, and you don't want to release your own source code under AGPL-3.0.
 
 To arrange one, contact **Luca at [luca@sorila.dev](mailto:luca@sorila.dev)** with a short description of what you'd like to do. Terms are agreed case by case, and **negotiation is encouraged**. You can choose either:
 
@@ -33,6 +33,8 @@ The price goes up with:
 - **how successful the project is expected to be.**
 
 A small project from an individual or small business sits near the starting price. A large company with a product that has real commercial potential pays more. The final terms are whatever we agree in writing.
+
+**Attribution-free:** under SAFCL you don't have to credit terra.pura or Sorila Development in your product, and you don't have to release your source code. The third-party components and data below still keep their own licences and credit requirements.
 
 ## Third-party components and data
 
