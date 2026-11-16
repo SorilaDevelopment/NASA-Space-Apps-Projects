@@ -1,15 +1,17 @@
 # Sorila Attribution-Free Commercial License (SAFCL)
 
-**Version 1.0, November 2026**
+**Version 1.0, November 2026: proposed terms**
 Copyright © 2026 Sorila Development
 
-This licence is an alternative to the GNU Affero General Public License v3.0 (AGPL-3.0) for software published by Sorila Development. Software covered by both is **dual-licensed**: you may use it under AGPL-3.0 for free, or under this licence once it has been granted to you.
+> **This is a proposal, not a legally binding licence.** It describes the terms Sorila Development proposes for commercial use of its software. Reading it, linking to it or relying on it does not create a contract or grant any rights. Nothing in it binds you or Sorila Development until both sides agree terms in writing in a Licence Agreement. Until then, the software is available only under AGPL-3.0.
+
+These proposed terms are an alternative to the GNU Affero General Public License v3.0 (AGPL-3.0) for software published by Sorila Development. Software covered by both is **dual-licensed**: you may use it under AGPL-3.0 for free, or under terms based on this proposal once you and the Licensor have agreed them in writing.
 
 ---
 
 ## 1. Definitions
 
-- **"Licensor"** means Sorila Development, contactable at [luca@sorila.dev](mailto:luca@sorila.dev).
+- **"Licensor"** means Sorila Development, contactable at [info@sorila.dev](mailto:info@sorila.dev).
 - **"Software"** means the Sorila Development project named in your Licence Agreement, including its source code, designs, documentation and any updates the Licensor provides.
 - **"Licensee"** or **"you"** means the person or organisation named in your Licence Agreement.
 - **"Licence Agreement"** means the written agreement (an email exchange is enough) between you and the Licensor that names the Software, the fee and any other terms.
@@ -22,9 +24,9 @@ You need this licence for Commercial Use of the Software when you **do not** wan
 
 You do **not** need this licence to use the Software unmodified on your own hardware, or to use, modify and share it under the terms of AGPL-3.0.
 
-## 3. Grant of licence
+## 3. Proposed grant of licence
 
-Once your Licence Agreement is in place and you have paid the fee, the Licensor grants you a worldwide, non-exclusive, non-transferable licence to:
+Once a Licence Agreement is in place and you have paid the fee, the Licensor would grant you a worldwide, non-exclusive, non-transferable licence to:
 
 1. use, copy and modify the Software;
 2. build the Software, or any part of it, into your own products and services;
@@ -91,4 +93,4 @@ TO THE EXTENT ALLOWED BY LAW, THE LICENSOR IS NOT LIABLE FOR ANY INDIRECT, INCID
 
 ---
 
-**To get a licence**, email [luca@sorila.dev](mailto:luca@sorila.dev) with a short description of what you'd like to do.
+**To start a conversation about a licence**, email [info@sorila.dev](mailto:info@sorila.dev) with a short description of what you'd like to do. Any terms we agree are recorded in a written Licence Agreement, which is what actually applies.

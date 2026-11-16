@@ -122,7 +122,7 @@ NASA POWER (climate, sunlight, soil wetness) · NASA GIBS (HLS, MODIS NDVI) · N
 
 ## Licence
 
-Dual-licensed: **AGPL-3.0** (free; see the repository's [`LICENSE`](../LICENSE)) or the **[SAFCL v1.0](../SAFCL.md)** (Sorila Attribution-Free Commercial License) if you want to edit it or build it into a commercial product or service without releasing your code under AGPL-3.0. Details and contact in [LICENSE.md](LICENSE.md).
+Dual-licensed: **AGPL-3.0** (free; see the repository's [`LICENSE`](../LICENSE)) or the **[SAFCL v1.0](../SAFCL.md)** (Sorila Attribution-Free Commercial License, a non-binding proposal for commercial terms) if you want to edit it or build it into a commercial product or service without releasing your code under AGPL-3.0. Details and contact in [LICENSE.md](LICENSE.md).
 
 ## Super Intelligence (SI) disclosure
 

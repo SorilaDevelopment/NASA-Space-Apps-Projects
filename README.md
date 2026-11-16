@@ -12,7 +12,7 @@ Our projects are **dual-licensed**. Pick whichever fits:
 | Edit it, or build it into a commercial product or service | ✅ if you release your source code under AGPL-3.0 | ✅ and keep your code private |
 | Credit Sorila Development | Required | Not required |
 
-The SAFCL price goes up with estimated revenue, company size and how successful the project is expected to be. To get one, email **[luca@sorila.dev](mailto:luca@sorila.dev)**. Full terms: [AGPL-3.0](LICENSE) · [SAFCL v1.0](SAFCL.md)
+The SAFCL price goes up with estimated revenue, company size and how successful the project is expected to be. SAFCL is a proposal, not a legally binding licence: nothing is binding until we agree terms in writing. To start, email **[info@sorila.dev](mailto:info@sorila.dev)**. Full terms: [AGPL-3.0](LICENSE) · [SAFCL v1.0](SAFCL.md)
 
 # List of releases:
 2026 Hackathon:
