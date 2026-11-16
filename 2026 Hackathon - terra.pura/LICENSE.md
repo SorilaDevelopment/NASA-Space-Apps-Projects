@@ -21,18 +21,18 @@ Using terra.pura as it is, on your own computer or for your own farm, needs noth
 
 You need a commercial licence if you want to **edit terra.pura or build it (or any part of it) into a product or service that you run commercially**, and you don't want to release your own source code under AGPL-3.0.
 
-To arrange one, contact **Luca at [luca@sorila.dev](mailto:luca@sorila.dev)** with a short description of what you'd like to do. Terms are agreed case by case, and can be either:
+To arrange one, contact **Luca at [luca@sorila.dev](mailto:luca@sorila.dev)** with a short description of what you'd like to do. Terms are agreed case by case, and **negotiation is encouraged**. You can choose either:
 
-- **a commission** on sales of the product or service that uses terra.pura; or
-- **a one-off flat fee**, as a rough guide:
+- **a fixed commission** on sales of the product or service that uses terra.pura; or
+- **a one-off flat fee, starting at £50.**
 
-| Who / what | Typical flat fee |
-|---|---|
-| A small project, individual or small business | **£50 – £100** |
-| A product with real commercial potential from a medium-to-large company | **£500 – £800** |
-| A very large company or a major platform | **£1,000+** |
+The price goes up with:
 
-These figures are guidance only. The final terms are whatever we agree in writing.
+- the **estimated revenue** of the product or service;
+- the **size of your company**; and
+- **how successful the project is expected to be.**
+
+A small project from an individual or small business sits near the starting price. A large company with a product that has real commercial potential pays more. The final terms are whatever we agree in writing.
 
 ## Third-party components and data
 
