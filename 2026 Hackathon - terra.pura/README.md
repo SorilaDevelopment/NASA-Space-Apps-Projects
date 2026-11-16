@@ -4,6 +4,8 @@ Changing how you see agriculture: find out what's worth growing on your land usi
 
 Live: https://terrapura.sorila.dev
 
+**Our mission, in 7 slides:** the pitch deck is at <https://slides.sorila.dev/terrapura-pitch> (press F for full screen).
+
 ## How to run it on your laptop or PC
 
 **Easiest: use it online at <https://terrapura.sorila.dev>.** Nothing to install.
@@ -111,7 +113,6 @@ Everything you enter is saved in your own browser (localStorage); there are no a
 | `settings.html` | Change providers, machinery, storage, land, staff & wages |
 | `about.html` | How it works, data sources, SI disclosure, allowlist for network admins |
 | `privacy.html` | Privacy policy |
-| `pitch/` | The pitch deck: a separate static site, hosted at slides.sorila.dev/terrapura-pitch |
 
 Hosting it for other people? See [DEPLOY.md](DEPLOY.md).
 

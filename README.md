@@ -3,7 +3,7 @@ SorilaDevelopment/NASA-Space-Apps-Projects is a repository created by Sorila Dev
 
 # List of releases:
 2026 Hackathon:
-- [terra.pura](2026%20Hackathon%20-%20terra.pura) · use it online at https://terrapura.sorila.dev
+- [terra.pura](2026%20Hackathon%20-%20terra.pura) · use it online at https://terrapura.sorila.dev · read our mission in the [pitch deck](https://slides.sorila.dev/terrapura-pitch)
 
 terra.pura is a project aimed at giving independent farmers access to technology that helps them prepare for the future, for free. This project combines lots of information sources to prepare farmers for anything, like weather risks, shown by NASA EONET API, field colour analysis using NASA MODIS Terra and much more! Our app also aims to allow farmers to know what is best to grow and sell based on their circumstances, while also citing how much they are estimated invest in return for an estimated profit.
 

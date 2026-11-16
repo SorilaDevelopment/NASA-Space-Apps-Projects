@@ -1,11 +1,11 @@
 # Deploying terra.pura
 
-Handover notes for whoever hosts this folder. It holds **two separate sites**:
+Handover notes for whoever hosts this folder. There are **two separate sites**:
 
 | Site | Folder | Domain | Type |
 |---|---|---|---|
 | terra.pura (the app) | this folder (everything except `pitch/`) | **https://terrapura.sorila.dev** | Plain static site |
-| Pitch deck | `pitch/` | **https://slides.sorila.dev/terrapura-pitch** | Plain static site |
+| Pitch deck | `pitch/` (only in the hosting copy, not on GitHub) | **https://slides.sorila.dev/terrapura-pitch** | Plain static site |
 
 The source is also published at https://github.com/SorilaDevelopment/NASA-Space-Apps-Projects, in the folder `2026 Hackathon - terra.pura`.
 
@@ -75,6 +75,8 @@ Visitors' browsers call these directly; the server doesn't. If a school or offic
 - **Licence:** dual-licensed, AGPL-3.0 or commercial; see `LICENSE.md`.
 
 ## 2. The pitch deck: slides.sorila.dev/terrapura-pitch
+
+The deck's source isn't in the public GitHub repo; it's only in the copy of this folder handed over for hosting. The READMEs link to the live deck instead.
 
 - **Upload:** put the contents of `pitch/` (about 5 MB) at `/terrapura-pitch/` on the slides host. It's a **plain static site**: one `index.html` plus `fonts/`, `img/` and `shots/`.
 - **Paths are relative,** so it works in that subfolder with no changes. Serve `/terrapura-pitch` with a trailing slash, or redirect to it, so relative paths resolve.
